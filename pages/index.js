@@ -27,19 +27,11 @@ export default function Home(props) {
   const { pathname } = useRouter();
   console.log(pathname);
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Next App</title>
       </Head>
-      <MainDiv>
-        <Link href="/about">
-          <a>to About</a>
-        </Link>
-
-        {props.data.map((e, i) => {
-          return <div key={i}>{e.title}</div>;
-        })}
-      </MainDiv>
-    </div>
+      <MainDiv>He</MainDiv>
+    </>
   );
 }
