@@ -1,3 +1,5 @@
+/* This global CSS goes to pages/_app.js. Other than that, it goes to wherever you want inside pages folder 
+or if you want your css styles to be at specific components, you have to add [name].module.css and import it as "import styles from "..." ! important   */
 html,
 body {
   padding: 0;
