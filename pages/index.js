@@ -4,9 +4,6 @@ import Layout from "../components/Layout";
 import styled from "styled-components";
 import Body from "../components/Body";
 // import styles from "../styles/Home.module.css"; this is how to import scoped styles
-const StyledCounterContainer = styled.main`
-  counter-reset: section;
-`;
 export async function getStaticProps(context) {
   // Call an external API endpoint to get posts
   // console.log(context);
@@ -22,9 +19,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <StyledCounterContainer>
-          <Body />
-        </StyledCounterContainer>
+        <Body />
       </Layout>
     </>
   );

@@ -42,18 +42,16 @@ const Header = ({ Mounted }) => {
   return (
     <StyledHeader>
       <StyledNav>
-        <TransitionGroup component={null}>
-          <CSSTransition
-            in={isMounted}
-            appear={true}
-            classNames="fadeup"
-            timeout={2000}
-          >
-            <div className="">
-              <a href="#">Logo here</a>
-            </div>
-          </CSSTransition>
-        </TransitionGroup>
+        <CSSTransition
+          in={isMounted}
+          classNames="fadeup"
+          timeout={2000}
+          mountOnEnter={true}
+        >
+          <div className="">
+            <a href="#">Logo here</a>
+          </div>
+        </CSSTransition>
 
         <div className="app-flex style-li">
           <ol className="app-flex app-align-items-center app-list-style-none">

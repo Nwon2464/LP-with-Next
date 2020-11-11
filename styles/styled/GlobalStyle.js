@@ -15,6 +15,7 @@ or if you want your css styles to be at specific components, you have to add [na
   --font-18: 18px;
   --transition: cubic-bezier(0.645, 0.045, 0.355, 1);
   --color-background-primary-default: #25274d;
+  --color-background-primary-lighter: #333566;
   --font-base: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --color-text-button-secondary: #0e0e10;
@@ -73,7 +74,7 @@ section {
 /* background-image: linear-gradient(to top, #003973, #e5e5be); */
 /* Fade Up enter */
 .fadeup-enter {
-  opacity: 0.01;
+  opacity: 0.02;
   transform: translateY(20px);
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
 }
@@ -85,22 +86,10 @@ section {
 .fadeup-enter-done {
   transform: translateY(0px);
 }
-.fadeup-appear {
-  opacity: 0.01;
-  transform: translateY(20px);
-  transition: opacity 500ms var(--easing), transform 500ms var(--easing);
-}
-.fadeup-appear-active {
-  opacity: 1;
-  transform: translateY(0px);
-  transition: opacity 500ms var(--easing), transform 500ms var(--easing);
-}
-.fadeup-appear-done {
-  transform: translateY(0px);
-}
 
 
 /*  */
+
 
 /*  */
 /* Fade Down Enter */
