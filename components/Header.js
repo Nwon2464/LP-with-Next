@@ -28,8 +28,8 @@ const StyledNav = styled.nav`
   counter-reset: item 0;
   z-index: 6;
 `;
-const Header = ({ Mounted }) => {
-  const [isMounted, setIsMounted] = useState(!Mounted);
+const Header = ({ isHome }) => {
+  const [isMounted, setIsMounted] = useState(!isHome);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsMounted(true);

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Header from "../components/Header";
 import Loader from "../components/Loading/Loader";
 import Footer from "../components/Footer";
@@ -34,17 +33,19 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-export default function Layout({ children }) {
-  const { pathname } = useRouter();
-  const Home = pathname === "/";
-  const [isMounted, setIsMounted] = useState(false);
+export default function Layout({ children, location }) {
+  const isHome = location === "/";
+  const [isLoading, setIsLoading] = useState(isHome);
+  //   useEffect(() => {
+  //     const timeout = setTimeout(() => setIsMounted(true), 2000);
+
+  //     return () => clearTimeout(timeout);
+  //   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 2000);
-
-    return () => clearTimeout(timeout);
+    console.log(window.location);
   }, []);
-
+  console.log("This is loading --", isLoading, "this is Ishome", isHome);
   return (
     <>
       <Head>
@@ -57,19 +58,21 @@ export default function Layout({ children }) {
             {/* <Nav isHome={isHome} /> */}
             {/* <Social isHome={isHome} /> */}
             {/* <Email isHome={isHome} /> */}
-            {Home && isMounted ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
+
+            {/* {isLoading && isHome ? (
+              <Loader finishLoading={() => setIsLoading(false)} />
+            ) : (
               <StyledContent>
-                <Header Mounted={isMounted} />
-                <LeftRightSideElement Mounted={isMounted} />
+                <Header isHome={isHome} />
+                <LeftRightSideElement isHome={isHome} />
 
                 <div id="content">
                   {children}
                   <Footer />
                 </div>
               </StyledContent>
-            ) : (
-              <Loader />
-            )}
+            )} */}
           </MainDiv>
         </ThemeProvider>
       </div>{" "}

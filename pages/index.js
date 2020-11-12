@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import Body from "../components/Body";
@@ -16,9 +18,11 @@ export async function getStaticProps(context) {
   };
 }
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
-      <Layout>
+      <Layout location={router.pathname}>
         <Body />
       </Layout>
     </>

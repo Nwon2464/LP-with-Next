@@ -91,8 +91,8 @@ const RightSideBarDiv2 = styled.div`
     transition: all 0.25s var(--transition);
   }
 `;
-const LeftRightSideElement = ({ Mounted }) => {
-  const [isMounted, setIsMounted] = useState(!Mounted);
+const LeftRightSideElement = ({ isHome }) => {
+  const [isMounted, setIsMounted] = useState(!isHome);
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 2000);
