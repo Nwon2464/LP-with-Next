@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import TransitionStyles from "./TransitionStyles";
+
 const GlobalStyle = createGlobalStyle`
 
 /* This global CSS goes to pages/_app.js. Other than that, it goes to wherever you want inside pages folder 
@@ -10,14 +11,15 @@ or if you want your css styles to be at specific components, you have to add [na
 :root {
   --color-text-primary: #fff;
   --color-text-light: #a8b2d1;
+  --color-text-lightest:#a8b2ff;
   --color-text-secondary: #2e9cca;
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   --font-18: 18px;
+  --border-radius-5:5px;
   --transition: cubic-bezier(0.645, 0.045, 0.355, 1);
   --color-background-primary-default: #25274d;
   --color-background-primary-lighter: #333566;
-  --font-base: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+ --font-base:  'Montserrat', sans-serif;   
   --color-text-button-secondary: #0e0e10;
   --color-background-button-secondary-default: rgba(0, 0, 0, 0.05);
   --z-index-below: -1;
@@ -38,17 +40,18 @@ or if you want your css styles to be at specific components, you have to add [na
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+
 }
 body {
+  font-family: var(--font-base);
+  font-size:62.5%;
   min-height: 100%;
   width: 100%;
   overflow-x: hidden;
   color: var(--color-text-primary);
   background: var(--color-background-primary-default);
 
-  font-family: "Roboto", sans-serif;
-  line-height: 1.3;
+  ${"" /* line-height: 1.3; */}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,12 +63,27 @@ body {
   grid-template-columns: 100%;
 }
 
-section {
-  margin: 0px auto;
-  padding: 100px 0px;
-  max-width: 1000px;
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  
+  cursor: pointer;
 }
-
+button {    
+    background: 0 0;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    font-size:inherit;
+    text-align: inherit;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
 
 
 
@@ -141,7 +159,8 @@ section {
   transition: opacity 300ms var(--easing);
 } */
 
-h1,
+${
+  "" /* h1,
 h2,
 h3,
 p {
@@ -152,6 +171,7 @@ p {
   padding: 0;
   vertical-align: baseline;
   color: var(--color-text-light);
+} */
 }
 
 .app-min-height-100 {
@@ -161,41 +181,11 @@ p {
   height: 10rem;
 }
 
-.style-li ol > li {
-  margin: 0 0.5rem;
-  counter-increment: item 1;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-button {
-  background: 0 0;
-
-  border: 0;
-  border-radius: 0;
-  color: inherit;
-  font: inherit;
-  text-align: inherit;
-}
-.style-li ol > li > a {
-  padding: 1rem;
-}
-
-.style-li ol > li > a:before {
-  content: "0" counter(item) ".";
-  margin-right: 5px;
-  color: var(--color-text-secondary);
-  /* font-size: var(--fz-xxs); */
-  text-align: right;
-}
 
 /* ------------ */
 /* Title Screen */
 /* ------------ */
+
 
 .app-top-nav {
   z-index: 1000;

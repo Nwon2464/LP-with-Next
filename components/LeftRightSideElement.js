@@ -6,9 +6,9 @@ const LeftSideBarDiv = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  left: 9rem;
+  left: 5rem;
   right: auto;
-  z-index: 10;
+  z-index: 98;
   color: var(--color-text-light);
 `;
 const LeftSideBarUl = styled.ul`
@@ -33,15 +33,15 @@ const LeftSideBarUl = styled.ul`
     transition: all 0.25s var(--transition);
   }
   & li a svg {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     fill: currentColor;
   }
   &::after {
     content: "";
     display: block;
     width: 1px;
-    height: 90px;
+    height: 140px;
     margin: 0px auto;
     background-color: var(--color-text-light);
   }
@@ -52,9 +52,9 @@ const RightSideBarDiv = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  right: 9rem;
+  right: 5rem;
   left: auto;
-  z-index: 10;
+  z-index: 98;
   color: var(--color-text-light);
 `;
 
@@ -66,20 +66,19 @@ const RightSideBarDiv2 = styled.div`
   position: relative;
 
   & a {
-    margin: 1.2rem auto;
-    padding: 1rem;
-    font-family: var(--font-mono);
-    font-size: var(--font-18);
+    font-size: 1.65rem;
+    margin: 0.8rem auto;
+    padding: 1.5rem 0rem;
     letter-spacing: 0.1em;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
-    transition: all 0.25s var(--transition);
+    transition: transform 0.25s var(--transition);
   }
   &::after {
     content: "";
     display: block;
     width: 1px;
-    height: 90px;
+    height: 140px;
     margin: 0px auto;
     background-color: var(--color-text-light);
   }
@@ -88,7 +87,7 @@ const RightSideBarDiv2 = styled.div`
   a:active {
     color: var(--color-text-secondary);
     transform: translateY(-3px);
-    transition: all 0.25s var(--transition);
+    transition: transform 0.25s var(--transition);
   }
 `;
 const LeftRightSideElement = ({ isHome }) => {

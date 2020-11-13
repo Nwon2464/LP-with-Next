@@ -11,19 +11,8 @@ const MainDiv = styled.main`
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 0 15rem;
+  padding: 0 12rem;
 
-  h1 {
-    font-size: clamp(1.4rem, 8vw, 1.8rem);
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 8vw, 2.5rem);
-
-    color: var(--color-text-primary);
-  }
   ${"" /* button {
     font-size: 1.5rem;
     margin-top: 5rem;

@@ -45,7 +45,6 @@ export default function Layout({ children, location }) {
   useEffect(() => {
     console.log(window.location);
   }, []);
-  console.log("This is loading --", isLoading, "this is Ishome", isHome);
   return (
     <>
       <Head>
@@ -55,12 +54,9 @@ export default function Layout({ children, location }) {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <MainDiv>
-            {/* <Nav isHome={isHome} /> */}
-            {/* <Social isHome={isHome} /> */}
-            {/* <Email isHome={isHome} /> */}
-            <Loader finishLoading={() => setIsLoading(false)} />
+            {/* <Loader finishLoading={() => setIsLoading(false)} /> */}
 
-            {/* {isLoading && isHome ? (
+            {isLoading && isHome ? (
               <Loader finishLoading={() => setIsLoading(false)} />
             ) : (
               <StyledContent>
@@ -72,7 +68,7 @@ export default function Layout({ children, location }) {
                   <Footer />
                 </div>
               </StyledContent>
-            )} */}
+            )}
           </MainDiv>
         </ThemeProvider>
       </div>{" "}

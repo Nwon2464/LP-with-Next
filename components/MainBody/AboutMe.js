@@ -4,15 +4,20 @@ import styled from "styled-components";
 import logo from "./logo.png";
 import useIntersect from "../useIntersect";
 const MainSection = styled.section`
-  padding: 10rem 20rem !important;
+  ${"" /* max-width: 900px; */}
+  padding: 10rem 0;
   max-width: 100%;
+  ${"" /* padding: 10rem 20rem !important; */}
   opacity: ${(props) => (props.visible ? 1 : 0)};
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   transform: translateY(-20px);
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
 
   h2 {
+    font-size: clamp(1.5rem, 8vw, 3rem);
     margin-bottom: 2rem;
+    color: var(--color-text-lightest);
+    filter: brightness(1.3);
   }
   h2::before {
     counter-increment: section 1;
@@ -22,8 +27,8 @@ const MainSection = styled.section`
   }
   h2::after {
     content: "";
-    width: 300px;
-    bottom: 8px;
+    width: 250px;
+    bottom: 15px;
     margin-left: 30px;
     height: 1px;
     position: relative;
@@ -31,28 +36,32 @@ const MainSection = styled.section`
     display: inline-block;
   }
   p {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
     /* margin: 0 0 1rem; */
   }
   ul.skills {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
     padding: 0px;
-    margin: 20px 0px 0px;
+    margin: 35px 0px 0px;
     overflow: hidden;
     list-style: none;
   }
   ul.skills li {
     position: relative;
-    margin-bottom: 10px;
+    padding-bottom: 2rem;
+    margin-left: 2rem;
     color: var(--color-text-light);
-    /* font-size: 2rem; */
-    padding-left: 20px;
+    font-size: 1.4rem;
+    ${"" /* padding-left: 20px; */}
   }
   ul.skills li::before {
     content: "▹";
     position: absolute;
-    left: -5px;
-
+    left: -35px;
+    top: 10px;
     font-size: 2rem;
     color: var(--color-text-secondary);
     /* font-size: var(--fz-sm); */

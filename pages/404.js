@@ -10,5 +10,3 @@ export default function NotFound() {
     </Layout>
   );
 }
-
-export default 404;
