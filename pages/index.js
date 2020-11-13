@@ -1,37 +1,30 @@
+import { useEffect } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Link from "next/link";
-
-import styles from "../styles/Home.module.css";
-import axios from "axios";
+import { useRouter } from "next/router";
+import Layout from "../components/Layout";
 import styled from "styled-components";
+import Body from "../components/Body";
+// import styles from "../styles/Home.module.css"; this is how to import scoped styles
 export async function getStaticProps(context) {
   // Call an external API endpoint to get posts
   // console.log(context);
 
-  const { data } = await axios.get(
-    "https://jsonplaceholder.typicode.com/users"
-  );
-  // console.log(context);
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {
-    props: { data },
+    props: { hello: "!" },
+    // props: { data },
   };
 }
-const MainDiv = styled.div`
-  background: red;
-`;
-export default function Home(props) {
-  // console.log(props);
-  const { pathname } = useRouter();
-  console.log(pathname);
+export default function Home() {
+  const router = useRouter();
+
   return (
     <>
-      <Head>
-        <title>Next App</title>
-      </Head>
-      <MainDiv>He</MainDiv>
+      <Layout location={router.pathname}>
+        <Body />
+      </Layout>
     </>
   );
 }
