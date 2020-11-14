@@ -255,7 +255,6 @@ export default function HAHA() {
 function Slide({ slide, offset }) {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
-
   return (
     <div
       ref={ref}
