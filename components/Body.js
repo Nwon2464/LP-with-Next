@@ -1,7 +1,7 @@
 import React from "react";
 import BodyMain from "./MainBody/BodyMain";
 import AboutMe from "./MainBody/AboutMe";
-import WhereIWork from "./MainBody/WhereIWork";
+import Projects from "./MainBody/Projects";
 import OtherProjects from "./MainBody/OtherProjects";
 import SomethinIBuilt from "./MainBody/SomethinIBuilt";
 import GetInTouch from "./MainBody/GetInTouch";
@@ -37,7 +37,7 @@ const Body = () => {
         })} */}
         <AboutMe />
         {/* <OtherProjects /> */}
-        <WhereIWork />
+        <Projects />
         <SomethinIBuilt />
         <GetInTouch />
       </MainDiv>

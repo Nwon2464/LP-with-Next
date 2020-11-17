@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,9 +20,14 @@ export async function getStaticProps(context) {
 export default function Home() {
   const router = useRouter();
 
+  console.log(router);
+  const [location, setLocation] = useState();
+  useEffect(() => {
+    // setLocation(window.location);
+  }, []);
   return (
     <>
-      <Layout location={router.pathname}>
+      <Layout location={router}>
         <Body />
       </Layout>
     </>

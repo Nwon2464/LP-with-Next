@@ -56,7 +56,7 @@
 //   ${"" /* border: 1px solid red; */}
 //   ${"" /* background: grey; */}
 // `;
-// const WhereIWork = () => {
+// const Projects = () => {
 //   const [setRef, visible] = useIntersect({
 //     threshold: 0.2,
 //   });
@@ -75,7 +75,7 @@
 //   }, []);
 
 //   return (
-//     <MainSection id="whereIWork" ref={setRef} visible={visible}>
+//     <MainSection id="Projects" ref={setRef} visible={visible}>
 //       <h2>1223</h2>
 //       <div style={{ display: "flex" }}>
 //         <StyledUUl>
@@ -115,7 +115,7 @@
 //     </MainSection>
 //   );
 // };
-// export default WhereIWork;
+// export default Projects;
 import React, { useEffect, useState } from "react";
 import useIntersect from "../useIntersect";
 import { datas } from "../../data/data";
@@ -129,10 +129,8 @@ const MainSection = styled.section`
   transform: translateY(-20px);
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
   display: flex;
-  ${"" /* height: 700px; */}
   justify-content: center;
-  ${'' /* padding: 20rem 0; */}
-  padding-top:20rem;
+  padding-top: 15rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -204,15 +202,15 @@ const MainSection = styled.section`
       height: 300px;
       display: flex;
       justify-content: flex-start;
-      background-size: cover;
-      background-position: center center;
+      ${"" /* background-size: cover;
+      background-position: center center; */}
       outline: 1px solid;
       position: absolute;
       top: 0;
     }
   }
   .slides .slide {
-    width: 500px;
+    width: 750px;
   }
 
   .image__card {
@@ -274,9 +272,9 @@ const MainSection = styled.section`
   }
 `;
 
-const WhereIWork = () => {
+const Projects = () => {
   const [setRef, visible] = useIntersect({
-    threshold: 0.2,
+    threshold: 0.4,
   });
   const [xPos, setXPos] = useState([]);
 
@@ -285,13 +283,13 @@ const WhereIWork = () => {
       setXPos([
         {
           translateXWidth: `${window.innerWidth * (-2 * 0.2)}px`,
-          translatePercentage: "65%",
+          translatePercentage: "50%",
           translateScale: "0.7",
           zIndex: "1",
         },
         {
           translateXWidth: `${window.innerWidth * (-1 * 0.2)}px`,
-          translatePercentage: "32%",
+          translatePercentage: "25%",
           translateScale: "0.85",
           zIndex: "2",
         },
@@ -303,13 +301,13 @@ const WhereIWork = () => {
         },
         {
           translateXWidth: `${window.innerWidth * (1 * 0.2)}px`,
-          translatePercentage: "-32%",
+          translatePercentage: "-25%",
           translateScale: "0.85",
           zIndex: "2",
         },
         {
           translateXWidth: `${window.innerWidth * (2 * 0.2)}px`,
-          translatePercentage: "-65%",
+          translatePercentage: "-50%",
           translateScale: "0.7",
           zIndex: "1",
         },
@@ -341,7 +339,7 @@ const WhereIWork = () => {
       zIndex: `${num.zIndex}`,
       position: "absolute",
       transition: "all 450ms ease 0s",
-      top: 0,
+      // top: 0,
       // left: "calc(50% - 375px)",
       transform: `translateX(${num.translateXWidth}) translateX(${num.translatePercentage}) scale(${num.translateScale})`,
     };
@@ -375,17 +373,14 @@ const WhereIWork = () => {
               <div style={imgStyle} key={i} className="slide">
                 <img
                   src={slide.image}
-                  style={{ height: "inherit", width: 350 }}
+                  style={{ height: "inherit", width: 530, objectFit: "fill" }}
                   alt="shit"
                 />
                 <div className="image__card">
                   <div className="image__card__upper">
                     <div className="image__card__upper__image">A</div>
                     <div className="image__card__upper__info">
-                      <p>
-                        {slide.title}
-                        {i}
-                      </p>
+                      <p>{slide.title}</p>
                       <a href="#">Hyper Scales</a>
                       <p>13.4k views</p>
                     </div>
@@ -407,4 +402,4 @@ const WhereIWork = () => {
     </MainSection>
   );
 };
-export default WhereIWork;
+export default Projects;

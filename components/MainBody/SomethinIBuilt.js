@@ -14,8 +14,8 @@ const MainSection = styled.section`
   flex-direction: column;
   align-items: center;
   ${"" /* padding: 10rem 0; */}
-  ${'' /* padding-top:20rem; */}
-  ${'' /* padding-bottom: 10rem; */}
+  ${"" /* padding-top:20rem; */}
+  ${"" /* padding-bottom: 10rem; */}
   h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -193,8 +193,6 @@ const SomethinIBuilt = () => {
                       project descriptionsproject descriptionsproject
                       descriptionsproject descriptionsproject
                       descriptionsproject descriptionsproject
-                      descriptionsproject descriptionsproject
-                      descriptionsproject descriptionsproject descriptions
                     </p>
                   </div>
                 </header>

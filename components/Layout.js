@@ -34,17 +34,29 @@ const StyledContent = styled.div`
 `;
 
 export default function Layout({ children, location }) {
-  const isHome = location === "/";
+  const isHome = location.pathname === "/";
   const [isLoading, setIsLoading] = useState(isHome);
-  //   useEffect(() => {
-  //     const timeout = setTimeout(() => setIsMounted(true), 2000);
+  // useEffect(() => {
+  //   console.log(window.location);
+  // }, []);
+  console.log(location);
+  console.log(isHome, isLoading);
+  // useEffect(() => {
+  //   if (isLoading) {
+  //     return;
+  //   }
+  //   if (location.hash) {
+  //     const id = location.hash.substring(1); // location.hash without the '#'
+  //     setTimeout(() => {
+  //       const el = document.getElementById(id);
+  //       if (el) {
+  //         el.scrollIntoView();
+  //         el.focus();
+  //       }
+  //     }, 0);
+  //   }
+  // }, [isLoading]);
 
-  //     return () => clearTimeout(timeout);
-  //   }, []);
-
-  useEffect(() => {
-    console.log(window.location);
-  }, []);
   return (
     <>
       <Head>
