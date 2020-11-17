@@ -283,7 +283,7 @@ const StyledHeader = styled.header`
     transform-origin: left;
   }
   .nav-links button :hover {
-    ${'' /* background: var(--color-text-light); */}
+    ${"" /* background: var(--color-text-light); */}
   }
   .nav-links button a {
     padding: 1.5rem;

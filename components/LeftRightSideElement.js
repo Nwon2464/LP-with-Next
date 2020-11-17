@@ -20,7 +20,7 @@ const LeftSideBarUl = styled.ul`
   padding: 0px;
   list-style: none;
   & li {
-    padding: 1.5rem;
+    padding: 0.9rem;
   }
 
   li > a {
@@ -33,15 +33,15 @@ const LeftSideBarUl = styled.ul`
     transition: all 0.25s var(--transition);
   }
   & li a svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     fill: currentColor;
   }
   &::after {
     content: "";
     display: block;
     width: 1px;
-    height: 140px;
+    height: 90px;
     margin: 0px auto;
     background-color: var(--color-text-light);
   }
@@ -66,9 +66,8 @@ const RightSideBarDiv2 = styled.div`
   position: relative;
 
   & a {
-    font-size: 1.65rem;
-    margin: 0.8rem auto;
-    padding: 1.5rem 0rem;
+    font-size: 1rem;
+    padding: 0.9rem 0rem;
     letter-spacing: 0.1em;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
@@ -78,7 +77,7 @@ const RightSideBarDiv2 = styled.div`
     content: "";
     display: block;
     width: 1px;
-    height: 140px;
+    height: 90px;
     margin: 0px auto;
     background-color: var(--color-text-light);
   }

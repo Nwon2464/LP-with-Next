@@ -10,25 +10,24 @@ const BodyMainSection = styled.section`
   min-height: 100vh;
 
   h1 {
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: 1.5rem;
     color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
   }
 
   h2 {
-    font-size: clamp(4rem, 8vw, 5rem);
-
+    font-size: 3rem;
     filter: brightness(1.3);
     color: var(--color-text-lightest);
   }
   h3 {
-    font-size: clamp(4rem, 8vw, 5rem);
+    font-size: 3rem;
 
     color: var(--color-text-light);
   }
   p {
-    font-size: 1.8rem;
-    max-width: 650px;
+    font-size: 1.3rem;
+    max-width: 500px;
     margin-top: 2rem;
     color: var(--color-text-light);
   }
@@ -39,8 +38,6 @@ const BodyMainSection = styled.section`
     padding: 1.5rem 3rem;
     margin-top: 5rem;
     cursor: pointer;
-
-    transition: transform 0.25s var(--transition);
   }
   button {
     border: 0;
@@ -52,9 +49,6 @@ const BodyMainSection = styled.section`
     color: var(--color-text-lightest);
   }
   a:hover {
-    transform: translateY(-5px);
-    transition: transform 0.25s var(--transition);
-
     .email path {
       fill: var(--color-text-lightest);
       stroke-width: 5;

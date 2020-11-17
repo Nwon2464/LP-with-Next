@@ -4,17 +4,15 @@ import styled from "styled-components";
 import logo from "./logo.png";
 import useIntersect from "../useIntersect";
 const MainSection = styled.section`
-  ${"" /* max-width: 900px; */}
-  padding: 10rem 0;
+  padding-top: 10rem;
   max-width: 100%;
-  ${"" /* padding: 10rem 20rem !important; */}
   opacity: ${(props) => (props.visible ? 1 : 0)};
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   transform: translateY(-20px);
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
 
   h2 {
-    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--color-text-lightest);
     filter: brightness(1.3);
@@ -36,7 +34,7 @@ const MainSection = styled.section`
     display: inline-block;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-text-light);
     margin-bottom: 1.5rem;
     /* margin: 0 0 1rem; */
@@ -83,7 +81,7 @@ const AboutMe = () => {
   return (
     <>
       <MainSection id="about" ref={setRef} visible={visible}>
-        <h2>About Me</h2>
+        <h2 className="head-number  ">About Me</h2>
         <div className="introduce">
           <div>
             <div>

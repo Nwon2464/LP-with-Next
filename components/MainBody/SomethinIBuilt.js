@@ -13,18 +13,44 @@ const MainSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${"" /* padding: 10rem 0; */}
+  ${'' /* padding-top:20rem; */}
+  ${'' /* padding-bottom: 10rem; */}
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    filter: brightness(1.3);
+    color: var(--color-text-lightest);
+    -webkit-filter: brightness(1.3);
+    filter: brightness(1.3);
+  }
   .archive {
-    ${"" /* font-family: var(--font-mono); */}
-    ${"" /* font-size: var(--fz-sm); */}
-    ${"" /* &:after {
-      bottom: 0.1em;
-    } */}
+    font-size: 1.3rem;
+    position: relative;
+    color: var(--color-text-secondary);
+    &:after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transform-origin: right;
+      transform: scale(0);
+      background: currentColor;
+      transition: transform 250ms ease-in;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    grid-auto-rows: 350px;
+    ${"" /* grid-auto-rows: 350px; */}
     grid-gap: 15px;
     position: relative;
     margin-top: 50px;
@@ -34,14 +60,14 @@ const MainSection = styled.section`
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
     }
-  }
-  .grid-background {
-    border-radius: 10px;
-    transition: all 0.25s var(--transition);
-    background: var(--color-background-primary-lighter);
-  }
-  .grid-background:hover,
-  .grid-background:active {
+
+    .grid-background {
+      border-radius: 10px;
+      transition: all 0.25s var(--transition);
+      background: var(--color-background-primary-lighter);
+    }
+    .grid-background:hover,
+    .grid-background:active {
       transform: translateY(-5px);
       transition: all 0.25s var(--transition);
     }
@@ -57,18 +83,17 @@ const MainSection = styled.section`
     display: flex;
     justify-content: space-between;
 
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .folders svg {
     width: 40px;
-    fill:var(--color-text-secondary);
+    fill: var(--color-text-secondary);
     height: 40px;
   }
-.links a svg :hover{
-    fill:var(--color-text-secondary);
-    
-}
+  .links a svg :hover {
+    fill: var(--color-text-secondary);
+  }
   .links a {
     padding: 0.5rem 1rem;
     margin-top: 0.5rem;
@@ -79,9 +104,18 @@ const MainSection = styled.section`
     fill: var(--color-text-light);
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    color: var(--color-text-lightest);
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--color-text-light);
   }
   .technology {
+    margin-top: 1rem;
+    color: var(--color-text-light);
+
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -90,8 +124,18 @@ const MainSection = styled.section`
   .technology li {
     margin-right: 1.5rem;
   }
-  .showMoreBtn{
-
+  .showMore {
+    margin-top: 5rem;
+    border: 1px solid var(--color-text-secondary);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--color-text-light);
+    margin-left: 1.5rem;
+    padding: 1.5rem;
+  }
+  .showMore:hover {
+    color: var(--color-text-secondary);
   }
 `;
 
@@ -167,7 +211,9 @@ const SomethinIBuilt = () => {
         })}
       </div>
       {loadMore < JSONData.length && (
-        <button onClick={showClick}>Show more</button>
+        <button className="showMore" onClick={showClick}>
+          Show more
+        </button>
       )}
     </MainSection>
   );
