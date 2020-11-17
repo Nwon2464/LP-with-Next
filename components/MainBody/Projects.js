@@ -233,7 +233,11 @@ const MainSection = styled.section`
     justify-content: center;
     align-items: center;
   }
-
+  .image__card__upper,
+  .image__card__middle,
+  .image__card__bottom {
+    margin-left: 0.5rem;
+  }
   .image__card__upper {
     display: flex;
     margin-top: 10px;
