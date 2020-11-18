@@ -234,9 +234,12 @@ const MainSection = styled.section`
     align-items: center;
   }
   .image__card__upper,
-  .image__card__middle,
   .image__card__bottom {
     margin-left: 0.5rem;
+  }
+
+  .image__card__middle {
+    margin-left: 0.3rem;
   }
   .image__card__upper {
     display: flex;
@@ -390,12 +393,25 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="image__card__middle">
-                    <a href="#">Drops Enabled</a>
-                    <a href="#">English</a>
+                    {slide.tech.map((e) => {
+                      return (
+                        <a
+                          style={{
+                            marginLeft: "0.2rem",
+                            maxWidth: 90,
+                            padding: "0.2rem",
+                          }}
+                        >
+                          {e}
+                        </a>
+                      );
+                    })}
                   </div>
-                  <div className="image__card__bottom">
-                    It's time to Enter the Hyper Scape! Tune in to see who wins
-                    the first ever APAC Hyper Scape competition
+                  <div
+                    className="image__card__bottom"
+                    style={{ marginTop: "0.3rem", marginRight: "0.5rem" }}
+                  >
+                    {slide.description}
                   </div>
                 </div>
               </div>

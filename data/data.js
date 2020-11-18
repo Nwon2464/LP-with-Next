@@ -60,33 +60,34 @@ module.exports = {
   datas: [
     {
       title: "Twitch Clone",
-      description: "Peru",
+      description:
+        "Complete Twitch Clone, React for Front-end, Express Back for Back-end, Google Authentication & JWT Implemented. Log-in and Sign-up Form added.",
       tech: ["React", "Express"],
       image: "/twitch-clone.png",
     },
     {
       title: "Sign Up & Log in Form",
-      description: "France",
+      description: "Log-in, and Sign-up Form validation by using Redux-form",
       tech: ["React", "Redux-Form", "Express"],
       image: "/redux-form.png",
     },
     {
-      title: "Mimisa Rocks",
-      description: "Australia",
-      tech: "A piece of heaven",
-      image:
-        "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      title: "Oauth Strategies",
+      description:
+        "Implemented 7 Passport Strategies such as Google, Facebook, Amazon, Twitter, Instagram, Github, and Spotify",
+      tech: ["React", "Express"],
+      image: "/oauth.png",
     },
     {
-      title: "Four",
-      description: "Australia",
-      tech: "A piece of heaven",
-      image:
-        "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      title: "Email Inbox",
+      description:
+        "Imitated real email-inbox application by using React-Table. Debounce search, Pagination, Filter, and Sorting",
+      tech: ["React", "React-Table", "Express"],
+      image: "/email.png",
     },
     {
       title: "COVID-19 Tracker",
-      description: "Australia",
+      description: "Real time Covid-19 tracker Application with ChartJS ",
       tech: ["Javascript", "React", "ChartJS"],
       image: "/corona.png",
     },
