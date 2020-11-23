@@ -60,6 +60,7 @@ module.exports = {
   datas: [
     {
       title: "Twitch Clone",
+      screenshot: "/twitchlogo.png",
       description:
         "Complete Twitch Clone, React for Front-end, Express Back for Back-end, Google Authentication & JWT Implemented. Log-in and Sign-up Form added.",
       tech: ["React", "Express"],
@@ -67,12 +68,14 @@ module.exports = {
     },
     {
       title: "Sign Up & Log in Form",
+      screenshot: "/reduxform.png",
       description: "Log-in, and Sign-up Form validation by using Redux-form",
       tech: ["React", "Redux-Form", "Express"],
       image: "/redux-form.png",
     },
     {
-      title: "Oauth Strategies",
+      title: "OAuth Strategies",
+      screenshot: "/passport.png",
       description:
         "Implemented 7 Passport Strategies such as Google, Facebook, Amazon, Twitter, Instagram, Github, and Spotify",
       tech: ["React", "Express"],
@@ -80,6 +83,8 @@ module.exports = {
     },
     {
       title: "Email Inbox",
+      screenshot: "/emailInbox.png",
+
       description:
         "Imitated real email-inbox application by using React-Table. Debounce search, Pagination, Filter, and Sorting",
       tech: ["React", "React-Table", "Express"],
@@ -87,6 +92,7 @@ module.exports = {
     },
     {
       title: "COVID-19 Tracker",
+      screenshot: "/covid.png",
       description: "Real time Covid-19 tracker Application with ChartJS ",
       tech: ["Javascript", "React", "ChartJS"],
       image: "/corona.png",

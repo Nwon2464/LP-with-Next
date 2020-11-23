@@ -243,7 +243,7 @@ const MainSection = styled.section`
   }
   .image__card__upper {
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
     justify-content: flex-start;
     margin-bottom: 13px;
     align-items: flex-start;
@@ -385,11 +385,14 @@ const Projects = () => {
                 />
                 <div className="image__card">
                   <div className="image__card__upper">
-                    <div className="image__card__upper__image">A</div>
+                    <img
+                      src={`${slide.screenshot}`}
+                      className="image__card__upper__image"
+                    />
                     <div className="image__card__upper__info">
-                      <p>{slide.title}</p>
-                      <a href="#">Hyper Scales</a>
-                      <p>13.4k views</p>
+                      <p style={{ fontSize: "0.7rem", marginTop: "1rem" }}>
+                        {slide.title}
+                      </p>
                     </div>
                   </div>
                   <div className="image__card__middle">
@@ -409,7 +412,11 @@ const Projects = () => {
                   </div>
                   <div
                     className="image__card__bottom"
-                    style={{ marginTop: "0.3rem", marginRight: "0.5rem" }}
+                    style={{
+                      marginTop: "0.3rem",
+                      marginRight: "0.5rem",
+                      fontSize: "0.8rem",
+                    }}
                   >
                     {slide.description}
                   </div>
