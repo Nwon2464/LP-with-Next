@@ -30,7 +30,17 @@ export const widthClasses = (e) => {
     return "app-flex app-flex-basis-6 app-max-width-6 app-justify-content-start app-mg-l-1 app-mg-r-05";
   }
 };
-
+export const colorClasses = (e) => {
+  if (e.id === "year") {
+    return "year-color";
+  } else if (e.id === "title") {
+    return "title-color";
+  } else if (e.id === "built") {
+    return "built-color";
+  } else if (e.id === "link") {
+    return "link-color";
+  }
+};
 export const generateSorting = (column) => {
   return (
     <>

@@ -1,5 +1,10 @@
 import React, { useMemo } from "react";
-import { columnData, generateSorting, widthClasses } from "./Column";
+import {
+  columnData,
+  generateSorting,
+  widthClasses,
+  colorClasses,
+} from "./Column";
 import styled from "styled-components";
 
 import { GlobalFilter } from "./filter";
@@ -12,6 +17,18 @@ import {
 } from "react-table";
 
 const TableDiv = styled.div`
+  .year-color {
+    color: var(--color-text-secondary);
+  }
+  .built-color {
+    color: var(--color-text-light);
+  }
+  .link-color {
+    color: var(--color-text-light);
+  }
+  .title-color {
+    color: var(--color-text-primary);
+  }
   li button {
     border: none;
   }
@@ -90,7 +107,8 @@ const Table = (props) => {
                 className="app-flex app-align-center
               "
                 style={{
-                  fontSize: "1rem",
+                  color: "var(--color-text-light)",
+                  fontSize: "1.2rem",
                   height: "3rem",
                   paddingTop: "0.3rem",
                   paddingBottom: "0.3rem",
@@ -124,7 +142,7 @@ const Table = (props) => {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody style={{ fontSize: "0.8rem" }} {...getTableBodyProps()}>
             {page.map((row, i) => {
               prepareRow(row);
               return (
@@ -138,6 +156,7 @@ const Table = (props) => {
                   {...row.getRowProps()}
                 >
                   {row.cells.map((cell, i) => {
+                    console.log(cell);
                     return (
                       <td
                         key={i}
@@ -145,16 +164,12 @@ const Table = (props) => {
                       >
                         <div className="app-flex app-white-space-nowrap app-overflow-hidden">
                           <h3
-                            className="app-ellipsis  app-cursor-pointer"
+                            className={`app-ellipsis  app-cursor-pointer ${colorClasses(
+                              cell.column
+                            )}`}
                             {...cell.getCellProps()}
                           >
-                            {cell.value.length === 3 ? (
-                              <>{cell.value[0]}</>
-                            ) : (
-                              <> {cell.render("Cell")}</>
-                            )}
-
-                            {/* {cell.render("Cell")} */}
+                            {cell.render("Cell")}
                           </h3>
                         </div>
                         {cell.column.id === "from" && (
