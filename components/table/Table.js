@@ -38,25 +38,33 @@ const currentData = [
   {
     year: "2020",
     title: "Twitch Clone",
-    built: ["React", "Express", "Javascript","JWT","Google Oauth"],
+    built: [
+      "React",
+      "Express",
+      "Javascript",
+      "JWT",
+      "Google Oauth",
+      "Redux-Form",
+      "Twitch API",
+    ],
     link: "Link",
   },
   {
     year: "2020",
     title: "Covid-19 Tracker",
-    built: ["React", "ChartJS","Covid-19 API"],
+    built: ["React", "ChartJS", "Covid-19 API"],
     link: "Link",
   },
   {
     year: "2020",
-    title: "title3",
-    built: "React",
+    title: "Email Inbox",
+    built: ["React", "React-table", "Express", "Faker", "React-DatePicker"],
     link: "Link",
   },
   {
     year: "2020",
-    title: "title4",
-    built: "React",
+    title: "OAuth Strategies",
+    built: ["React", "Express", "PassportJS"],
     link: "Link",
   },
 ];
@@ -155,7 +163,6 @@ const Table = (props) => {
                   {...row.getRowProps()}
                 >
                   {row.cells.map((cell, i) => {
-                    console.log(cell);
                     return (
                       <td
                         key={i}
@@ -171,47 +178,6 @@ const Table = (props) => {
                             {cell.render("Cell")}
                           </h3>
                         </div>
-                        {cell.column.id === "from" && (
-                          <div className="dropdown-content-2">
-                            <p
-                              className="app-text-deco-under app-font-weight-600 app-cursor-pointer"
-                              style={{ color: "#666666" }}
-                            >
-                              {cell.value}
-                            </p>
-                          </div>
-                        )}
-
-                        {cell.value.length === 3 && (
-                          <button
-                            className="dropdown app-cursor-pointer
-                    app-align-center app-font-color-white app-flex app-background-message app-width-2 app-justify-content-center app-border-radius-5 app-mg-l-1 app-font-weight-600 app-plus-button app-full-height"
-                          >
-                            <div className="dropdown-content">
-                              <p
-                                className="app-text-deco-under"
-                                style={{ color: "#666666" }}
-                              >
-                                {cell.value[1]}
-                              </p>
-                              <p
-                                className="app-text-deco-under"
-                                style={{ color: "#666666" }}
-                              >
-                                {cell.value[2]}
-                              </p>
-
-                              {/* <p>{cell.value[0]} </p> */}
-                            </div>
-
-                            <h3
-                              style={{ width: "3rem" }}
-                              className="app-flex app-justify-content-center"
-                            >
-                              +{cell.value.length - 1}
-                            </h3>
-                          </button>
-                        )}
                       </td>
                     );
                   })}
