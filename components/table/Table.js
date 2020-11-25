@@ -34,36 +34,35 @@ const TableDiv = styled.div`
   }
 `;
 
+const currentData = [
+  {
+    year: "2020",
+    title: "Twitch Clone",
+    built: ["React", "Express", "Javascript","JWT","Google Oauth"],
+    link: "Link",
+  },
+  {
+    year: "2020",
+    title: "Covid-19 Tracker",
+    built: ["React", "ChartJS","Covid-19 API"],
+    link: "Link",
+  },
+  {
+    year: "2020",
+    title: "title3",
+    built: "React",
+    link: "Link",
+  },
+  {
+    year: "2020",
+    title: "title4",
+    built: "React",
+    link: "Link",
+  },
+];
+
 const Table = (props) => {
-  const data = useMemo(
-    () => [
-      {
-        year: "2020",
-        title: "title1",
-        built: "React",
-        link: "Link",
-      },
-      {
-        year: "2020",
-        title: "title2",
-        built: "React",
-        link: "Link",
-      },
-      {
-        year: "2020",
-        title: "title3",
-        built: "React",
-        link: "Link",
-      },
-      {
-        year: "2020",
-        title: "title4",
-        built: "React",
-        link: "Link",
-      },
-    ],
-    []
-  );
+  const data = useMemo(() => currentData, [currentData]);
   const columns = useMemo(() => columnData, []);
   const {
     getTableProps,
