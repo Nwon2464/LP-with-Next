@@ -163,6 +163,7 @@ const Table = (props) => {
                   {...row.getRowProps()}
                 >
                   {row.cells.map((cell, i) => {
+                    console.log(typeof cell.value);
                     return (
                       <td
                         key={i}
