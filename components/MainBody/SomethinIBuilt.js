@@ -3,6 +3,7 @@ import styled from "styled-components";
 import useIntersect from "../useIntersect";
 
 import Link from "next/link";
+                  
 import { ReactComponent as External } from "../../data/icons/external.svg";
 import { ReactComponent as FolderIcon } from "../../data/icons/folder.svg";
 const MainSection = styled.section`

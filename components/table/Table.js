@@ -6,6 +6,8 @@ import {
   colorClasses,
 } from "./Column";
 import styled from "styled-components";
+import { ReactComponent as FolderIcon } from "../../data/icons/folder.svg";
+import { ReactComponent as GithubIcon } from "../../data/icons/github.svg";
 
 import { GlobalFilter } from "./filter";
 import {
@@ -47,25 +49,25 @@ const currentData = [
       "Redux-Form",
       "Twitch API",
     ],
-    link: "Link",
+    link: ["https://www.google.com/"],
   },
   {
     year: "2020",
     title: "Covid-19 Tracker",
     built: ["React", "ChartJS", "Covid-19 API"],
-    link: "Link",
+    link: ["https://www.google.com/"],
   },
   {
     year: "2020",
     title: "Email Inbox",
     built: ["React", "React-table", "Express", "Faker", "React-DatePicker"],
-    link: "Link",
+    link: ["https://www.google.com/"],
   },
   {
     year: "2020",
     title: "OAuth Strategies",
     built: ["React", "Express", "PassportJS"],
-    link: "Link",
+    link: ["https://www.google.com/", "https://www.naver.com"],
   },
 ];
 
@@ -156,14 +158,11 @@ const Table = (props) => {
                 <tr
                   key={i}
                   className="app-custom-border-bottom-2 app-height-25 app-flex app-align-center"
-                  style={{
-                    paddingTop: "0.3rem",
-                    paddingBottom: "0.3rem",
-                  }}
+                  style={{ padding: "1rem 0" }}
                   {...row.getRowProps()}
                 >
                   {row.cells.map((cell, i) => {
-                    console.log(typeof cell.value);
+                    console.log(cell);
                     return (
                       <td
                         key={i}
@@ -176,7 +175,44 @@ const Table = (props) => {
                             )}`}
                             {...cell.getCellProps()}
                           >
-                            {cell.render("Cell")}
+                            {cell.column.id === "built" &&
+                              cell.value.map((e, i) => {
+                                return (
+                                  <span key={i}>
+                                    {e}
+
+                                    {i !== cell.value.length - 1 && (
+                                      <span style={{ margin: "0 0.5rem" }}>
+                                        &middot;
+                                      </span>
+                                    )}
+                                  </span>
+                                );
+                              })}
+                            {cell.column.id === "link" &&
+                              cell.value.map((e, i) => {
+                                console.log(e);
+                                return (
+                                  <>
+                                    <a
+                                      href={e}
+                                      key={i}
+                                      style={{ margin: "0 0.5rem" }}
+                                    >
+                                      <FolderIcon
+                                        style={{
+                                          width: 20,
+                                          height: 20,
+                                          fill: "currentColor",
+                                        }}
+                                      />
+                                    </a>
+                                  </>
+                                );
+                              })}
+                            {cell.column.id !== "link" &&
+                              cell.column.id !== "built" &&
+                              cell.render("Cell")}
                           </h3>
                         </div>
                       </td>
