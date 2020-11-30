@@ -162,7 +162,6 @@ const Table = (props) => {
                   {...row.getRowProps()}
                 >
                   {row.cells.map((cell, i) => {
-                    console.log(cell);
                     return (
                       <td
                         key={i}
@@ -191,21 +190,10 @@ const Table = (props) => {
                               })}
                             {cell.column.id === "link" &&
                               cell.value.map((e, i) => {
-                                console.log(e);
                                 return (
                                   <>
-                                    <a
-                                      href={e}
-                                      key={i}
-                                      style={{ margin: "0 0.5rem" }}
-                                    >
-                                      <FolderIcon
-                                        style={{
-                                          width: 20,
-                                          height: 20,
-                                          fill: "currentColor",
-                                        }}
-                                      />
+                                    <a href={e}>
+                                      <GithubIcon />
                                     </a>
                                   </>
                                 );
