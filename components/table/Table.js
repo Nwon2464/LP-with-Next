@@ -34,6 +34,13 @@ const TableDiv = styled.div`
   li button {
     border: none;
   }
+
+  .github:hover {
+    color: var(--color-text-secondary);
+  }
+  .link:hover {
+    color: var(--color-text-secondary);
+  }
 `;
 //Data need to be fetched from server! create one!
 const currentData = [
@@ -49,25 +56,27 @@ const currentData = [
       "Redux-Form",
       "Twitch API",
     ],
-    link: ["https://www.google.com/"],
+    link: [{ github: "https://www.google.com/", link: "" }],
   },
   {
     year: "2020",
     title: "Covid-19 Tracker",
     built: ["React", "ChartJS", "Covid-19 API"],
-    link: ["https://www.google.com/"],
+    link: [{ github: "https://www.google.com/", link: "" }],
   },
   {
     year: "2020",
     title: "Email Inbox",
     built: ["React", "React-table", "Express", "Faker", "React-DatePicker"],
-    link: ["https://www.google.com/"],
+    link: [{ github: "https://www.google.com/", link: "" }],
   },
   {
     year: "2020",
     title: "OAuth Strategies",
     built: ["React", "Express", "PassportJS"],
-    link: ["https://www.google.com/", "https://www.naver.com"],
+    link: [
+      { github: "https://www.google.com/", link: "https://www.naver.com" },
+    ],
   },
 ];
 
@@ -192,9 +201,47 @@ const Table = (props) => {
                               cell.value.map((e, i) => {
                                 return (
                                   <>
-                                    <a href={e}>
-                                      <GithubIcon />
+                                    {e.github.length !== 0 && (
+                                      <a className="github" href={e.github}>
+                                        <GithubIcon
+                                          style={{
+                                            width: 20,
+                                            height: 20,
+                                            fill: "currentColor",
+                                          }}
+                                        />
+                                      </a>
+                                    )}
+                                    {e.link && (
+                                      <a className="link" href={e.link}>
+                                        <FolderIcon
+                                          style={{
+                                            marginLeft: "0.5rem",
+                                            width: 20,
+                                            height: 20,
+                                            fill: "currentColor",
+                                          }}
+                                        />{" "}
+                                      </a>
+                                    )}
+                                    {/* <a href={e}>
+                                      <FolderIcon
+                                        style={{
+                                          width: 20,
+                                          height: 20,
+                                          fill: "currentColor",
+                                        }}
+                                      />
                                     </a>
+                                    <a href={e}>
+                                      <GithubIcon
+                                        style={{
+                                          width: 20,
+                                          height: 20,
+                                          fill: "currentColor",
+                                        }}
+                                      />
+                                    </a> */}
                                   </>
                                 );
                               })}
