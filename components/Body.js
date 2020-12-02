@@ -14,17 +14,7 @@ const MainDiv = styled.main`
   min-height: 100vh;
   padding: 0 12rem;
 }
-  ${
-    "" /* button {
-    font-size: 1.5rem;
-    margin-top: 5rem;
-    margin-left: 0rem;
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-text-secondary);
-    padding: 1.5rem 3rem;
-    border-radius: 5px;
-  } */
-  }
+  
 `;
 const Body = () => {
   return (
