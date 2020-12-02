@@ -80,7 +80,7 @@ const currentData = [
   },
 ];
 
-const Table = (props) => {
+const Table = () => {
   const data = useMemo(() => currentData, [currentData]);
   const columns = useMemo(() => columnData, []);
   const {
