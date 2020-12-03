@@ -19,7 +19,6 @@ export async function getStaticProps(context) {
   // will receive `posts` as a prop at build time
   return {
     props: { hello: "!" },
-    // props: { data },
   };
 }
 const MainDiv = styled.div`
@@ -36,7 +35,7 @@ const StyledContent = styled.div`
 export default function Layout({ children, location }) {
   const isHome = location.pathname === "/";
   const [isLoading, setIsLoading] = useState(isHome);
-  
+
   return (
     <>
       <Head>
@@ -46,8 +45,6 @@ export default function Layout({ children, location }) {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <MainDiv>
-            {/* <Loader finishLoading={() => setIsLoading(false)} /> */}
-
             {isLoading && isHome ? (
               <Loader finishLoading={() => setIsLoading(false)} />
             ) : (
