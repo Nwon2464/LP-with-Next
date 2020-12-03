@@ -21,9 +21,6 @@ const Body = () => {
       <MainDiv>
         <BodyMain />
 
-        {/* {components.map((el, i) => {
-          return <FadeInSection key={i}>{el}</FadeInSection>;
-        })} */}
         <AboutMe />
         <Projects />
         <SomethinIBuilt />
