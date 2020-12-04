@@ -100,12 +100,13 @@ const Table = () => {
     canNextPage,
     canPreviousPage,
   } = useTable(
-    { columns, data },
+    { columns, data, disableSortBy: false },
     useFilters,
     useGlobalFilter,
     useSortBy,
     usePagination
   );
+  //disableSortBy default to false, need to config for the column you want to disable. "disableSortBy:true"
   const { pageIndex, globalFilter } = state;
   return (
     <TableDiv id="app-full-screen" className="app-relative app-full-width">
@@ -224,24 +225,6 @@ const Table = () => {
                                         />{" "}
                                       </a>
                                     )}
-                                    {/* <a href={e}>
-                                      <FolderIcon
-                                        style={{
-                                          width: 20,
-                                          height: 20,
-                                          fill: "currentColor",
-                                        }}
-                                      />
-                                    </a>
-                                    <a href={e}>
-                                      <GithubIcon
-                                        style={{
-                                          width: 20,
-                                          height: 20,
-                                          fill: "currentColor",
-                                        }}
-                                      />
-                                    </a> */}
                                   </>
                                 );
                               })}

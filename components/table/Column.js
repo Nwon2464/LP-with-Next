@@ -16,6 +16,7 @@ export const columnData = [
   {
     Header: "Link",
     accessor: "link",
+    disableSortBy: true,
   },
 ];
 
