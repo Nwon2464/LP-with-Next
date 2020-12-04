@@ -64,26 +64,18 @@ const StyledLoader = styled.div`
     }
     @keyframes animateStar {
       0% {
-        transform: translateY(0px);
         stroke-dashoffset: 0;
-        fill: #31e8ff;
       }
       20% {
-        transform: translateY(-50px);
         stroke-dashoffset: 270;
-        fill: #31e8ff;
-        fill: transparent;
       }
       40% {
-        transform: translateY(0px);
         stroke-dashoffset: 670;
       }
       80% {
-        transform: translateY(-50px);
         stroke-dashoffset: 1000;
       }
       100% {
-        transform: translateY(0px);
         stroke-dashoffset: 1340;
         fill: transparent;
       }
@@ -105,8 +97,6 @@ const Loader = ({ finishLoading }) => {
       <StyledLoader isMounted={isMounted}>
         <div className="logo-wrapper">
           <IconLoader
-            // style={{ fill: "transparent" }}
-            // stroke="10"
             viewBox="-10 -10 530 530"
           />
         </div>

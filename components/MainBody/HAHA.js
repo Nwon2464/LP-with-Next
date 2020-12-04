@@ -265,12 +265,6 @@ function Slide({ slide, offset }) {
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
-      {/* <div
-        className="slideBackground"
-        style={{
-          backgroundImage: `url('${slide.image}')`,
-        }}
-      /> */}
       <div
         className="slideContent"
         style={{
