@@ -3,7 +3,7 @@ import styled from "styled-components";
 import useIntersect from "../useIntersect";
 
 import Link from "next/link";
-                  
+
 import { ReactComponent as External } from "../../data/icons/external.svg";
 import { ReactComponent as FolderIcon } from "../../data/icons/folder.svg";
 const MainSection = styled.section`
@@ -14,9 +14,6 @@ const MainSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${"" /* padding: 10rem 0; */}
-  ${"" /* padding-top:20rem; */}
-  ${"" /* padding-bottom: 10rem; */}
   h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -140,7 +137,7 @@ const MainSection = styled.section`
   }
 `;
 
-const SomethinIBuilt = () => {
+const OtherSideProjects = () => {
   const [setRef, visible] = useIntersect({
     threshold: 0.2,
   });
@@ -217,4 +214,68 @@ const SomethinIBuilt = () => {
     </MainSection>
   );
 };
-export default SomethinIBuilt;
+export default OtherSideProjects;
+
+const data = [
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+  {
+    description: "",
+    built: ["React", "ChartJS", "Covid-19 API"],
+    title: "",
+    link: [{ github: "https://www.google.com/", link: "" }],
+  },
+];

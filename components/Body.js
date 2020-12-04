@@ -2,7 +2,7 @@ import React from "react";
 import BodyMain from "./MainBody/BodyMain";
 import AboutMe from "./MainBody/AboutMe";
 import Projects from "./MainBody/Projects";
-import SomethinIBuilt from "./MainBody/SomethinIBuilt";
+import OtherSideProjects from "./MainBody/OtherSideProjects";
 import GetInTouch from "./MainBody/GetInTouch";
 import styled from "styled-components";
 const MainDiv = styled.main`
@@ -20,10 +20,9 @@ const Body = () => {
     <>
       <MainDiv>
         <BodyMain />
-
         <AboutMe />
         <Projects />
-        <SomethinIBuilt />
+        <OtherSideProjects />
         <GetInTouch />
       </MainDiv>
     </>
