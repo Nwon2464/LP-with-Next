@@ -51,7 +51,6 @@ body {
   color: var(--color-text-primary);
   background: var(--color-background-primary-default);
 
-  ${"" /* line-height: 1.3; */}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

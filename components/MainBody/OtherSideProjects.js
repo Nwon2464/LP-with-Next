@@ -168,7 +168,7 @@ const OtherSideProjects = () => {
         <a className="archive">View the archieve</a>
       </Link>
       <div className="grid">
-        {JSONData.slice(0, loadMore).map((e, i) => {
+        {projects.slice(0, loadMore).map((e, i) => {
           return (
             <div className="grid-background">
               <div className="grid-inner">
@@ -178,27 +178,27 @@ const OtherSideProjects = () => {
                       <FolderIcon />
                     </div>
                     <div className="links">
-                      <Link href="#">
+                      <Link href={e.deployment}>
                         <a>
                           <External />
                         </a>
                       </Link>
                     </div>
                   </div>
-                  <h3>Integrating Algolia Search with WordPress Multisite</h3>
+                  <h3>{e.title}</h3>
                   <div>
-                    <p>
-                      project descriptionsproject descriptionsproject
-                      descriptionsproject descriptionsproject
-                      descriptionsproject descriptionsproject
-                    </p>
+                    <p>{e.description} </p>
                   </div>
                 </header>
                 <footer>
                   <ul className="technology">
-                    <li>Tech used</li>
-                    <li>Tech used</li>
-                    <li>Tech used</li>
+                    {e.tech.map((e, i) => {
+                      return (
+                        <li style={{ color: "#8892B0" }} key={i}>
+                          {e}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </footer>
               </div>
@@ -215,7 +215,69 @@ const OtherSideProjects = () => {
   );
 };
 export default OtherSideProjects;
-
+const projects = [
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+];
 const data = [
   {
     description: "",
