@@ -9,7 +9,7 @@ function About(props) {
   console.log(useRouter());
   return (
     <Layout location={pathname}>
-      <div>NotFound</div>
+      <div>NotFound.</div>
     </Layout>
   );
 }
