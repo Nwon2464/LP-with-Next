@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 //Not found !
-//Added
+//
 function About(props) {
   useEffect(() => {}, []);
   const { pathname } = useRouter();
