@@ -169,6 +169,7 @@ const OtherSideProjects = () => {
       </Link>
       <div className="grid">
         {projects.slice(0, loadMore).map((e, i) => {
+          console.log(e);
           return (
             <div className="grid-background">
               <div className="grid-inner">
@@ -224,6 +225,48 @@ const projects = [
     tech: ["React", "slick-carousel", "styled-components"],
   },
   {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
+    title: "Amazon Landing Page Clone",
+    description:
+      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+    tech: ["React", "slick-carousel", "styled-components"],
+  },
+  {
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
     title: "Amazon Landing Page Clone",
     description:
       "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
@@ -231,48 +274,24 @@ const projects = [
   },
   {
     title: "Amazon Landing Page Clone",
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
     description:
       "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
     tech: ["React", "slick-carousel", "styled-components"],
   },
   {
     title: "Amazon Landing Page Clone",
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
     description:
       "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
     tech: ["React", "slick-carousel", "styled-components"],
   },
   {
     title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
+    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+
     description:
       "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
     tech: ["React", "slick-carousel", "styled-components"],

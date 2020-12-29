@@ -60,7 +60,7 @@ export default function Layout({ children, location }) {
             )}
           </MainDiv>
         </ThemeProvider>
-      </div>{" "}
+      </div>
     </>
   );
 }
