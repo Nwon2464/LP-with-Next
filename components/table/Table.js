@@ -111,10 +111,10 @@ const Table = () => {
   return (
     <TableDiv id="app-full-screen" className="app-relative app-full-width">
       <>
-        <GlobalFilter
+        {/* <GlobalFilter
           globalFilter={globalFilter}
           setGlobalFilter={setGlobalFilter}
-        />
+        /> */}
         <table
           className="
         app-flex-column app-flex 
