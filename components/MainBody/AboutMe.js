@@ -53,7 +53,6 @@ const MainSection = styled.section`
     margin-left: 2rem;
     color: var(--color-text-light);
     font-size: 1.4rem;
-    ${"" /* padding-left: 20px; */}
   }
   ul.skills li::before {
     content: "▹";
@@ -62,7 +61,6 @@ const MainSection = styled.section`
     top: 10px;
     font-size: 2rem;
     color: var(--color-text-secondary);
-    /* font-size: var(--fz-sm); */
     line-height: 12px;
   }
   .introduce {

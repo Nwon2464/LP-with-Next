@@ -141,9 +141,7 @@ const OtherSideProjects = () => {
   const [setRef, visible] = useIntersect({
     threshold: 0.2,
   });
-
   const [loadMore, setLoadMore] = useState(6);
-
   const showClick = (e) => {
     e.preventDefault();
     setLoadMore(loadMore + 4);
@@ -169,9 +167,8 @@ const OtherSideProjects = () => {
       </Link>
       <div className="grid">
         {projects.slice(0, loadMore).map((e, i) => {
-          console.log(e);
           return (
-            <div className="grid-background">
+            <div className="grid-background" key={i}>
               <div className="grid-inner">
                 <header key={i}>
                   <div className="projects">

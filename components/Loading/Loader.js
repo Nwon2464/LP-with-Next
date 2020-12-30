@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { ReactComponent as IconLoader } from "../../data/icons/loader.svg";
+import { ReactComponent as IconLoader1 } from "../../data/icons/loader.svg";
 const StyledLoader = styled.div`
   display: flex;
   justify-content: center;
@@ -12,8 +12,6 @@ const StyledLoader = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  ${"" /* background-color: white; */}
-  ${"" /* z-index: 99; */}
   .logo-wrapper {
     width: 300px;
     height: 300px;
@@ -21,7 +19,6 @@ const StyledLoader = styled.div`
     justify-content: center;
     align-items: center;
     transition: var(--transition);
-    ${"" /* opacity: ${(props) => (props.isMounted ? 1 : 0)}; */}
     svg {
       width: 80px;
       height: 300px;
@@ -35,7 +32,6 @@ const StyledLoader = styled.div`
         stroke-dashoffset: 0;
         animation: animateStar 2.5s linear;
         animation-duration: 2.5s;
-        ${"" /* transition: transform 2.5s ease-in-out; */}
       }
       &: nth-child(2) {
         fill: transparent;
@@ -96,9 +92,7 @@ const Loader = ({ finishLoading }) => {
     <>
       <StyledLoader isMounted={isMounted}>
         <div className="logo-wrapper">
-          <IconLoader
-            viewBox="-10 -10 530 530"
-          />
+          <IconLoader1 viewBox="-10 -10 530 530" />
         </div>
       </StyledLoader>
     </>

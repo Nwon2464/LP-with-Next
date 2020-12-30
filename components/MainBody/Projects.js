@@ -27,7 +27,6 @@ const MainSection = styled.section`
     color: var(--color-text-secondary);
   }
   h2 {
-
     font-size: 2rem;
     filter: brightness(1.3);
     color: var(--color-text-lightest);
@@ -218,8 +217,6 @@ const Projects = () => {
       zIndex: `${num.zIndex}`,
       position: "absolute",
       transition: "all 450ms ease 0s",
-      // top: 0,
-      // left: "calc(50% - 375px)",
       transform: `translateX(${num.translateXWidth}) translateX(${num.translatePercentage}) scale(${num.translateScale})`,
     };
   };
@@ -268,9 +265,10 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="image__card__middle">
-                    {slide.tech.map((e) => {
+                    {slide.tech.map((e, i) => {
                       return (
                         <a
+                          key={i}
                           style={{
                             marginLeft: "0.2rem",
                             maxWidth: 90,
