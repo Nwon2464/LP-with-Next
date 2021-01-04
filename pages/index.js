@@ -21,7 +21,6 @@ export async function getStaticProps(context) {
 export default function Home() {
   const router = useRouter();
 
-  console.log(router);
   const [location, setLocation] = useState();
   useEffect(() => {
     // setLocation(window.location);

@@ -52,10 +52,7 @@ export default function Layout({ children, location }) {
                 <Header isHome={isHome} />
                 <LeftRightSideElement isHome={isHome} />
 
-                <div id="content">
-                  {children}
-                  <Footer />
-                </div>
+                <div id="content">{children}</div>
               </StyledContent>
             )}
           </MainDiv>
