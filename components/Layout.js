@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import Loader from "../components/Loading/Loader";
-import Footer from "../components/Footer";
 
 import LeftRightSideElement from "../components/LeftRightSideElement";
 import styled, { ThemeProvider } from "styled-components";
