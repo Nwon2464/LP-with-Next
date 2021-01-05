@@ -10,7 +10,7 @@ export default function NotFound() {
 
   return (
     <Layout location={pathname}>
-      <NotFoundDiv>NotFound</NotFoundDiv>
+      <NotFoundDiv>NotFound!</NotFoundDiv>
     </Layout>
   );
 }
