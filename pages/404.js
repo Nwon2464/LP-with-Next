@@ -4,7 +4,7 @@ import { ReactComponent as GlitchIcon } from "../data/icons/glitch.svg";
 import styled from "styled-components";
 import Link from "next/link";
 const NotFoundDiv = styled.div`
-  color: white;
+  color: #fff;
   padding: 15rem;
   .flex {
     display: flex;
