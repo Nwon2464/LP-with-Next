@@ -22,6 +22,7 @@ const NotFoundDiv = styled.div`
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 `;
 export default function NotFound() {
