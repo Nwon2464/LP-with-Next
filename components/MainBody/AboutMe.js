@@ -4,7 +4,6 @@ import styled from "styled-components";
 import logo from "./logo.png";
 import useIntersect from "../useIntersect";
 const MainSection = styled.section`
-  padding-top: 10rem;
   max-width: 100%;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};

@@ -152,6 +152,95 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 
+
+@media (max-width: 1080px) {
+  .main{
+    padding: 0 6.5rem;
+    }
+}
+    @media (max-width: 768px) {
+ .main{
+  padding: 0 50px;
+ }
+ .LeftSide {
+  display: none;
+ }
+ .RightSide{
+  display: none;
+ }
+    }
+    @media (max-width: 480px) {
+  .main{
+    padding: 0 25px;
+  }
+    }
+
+
+@media only screen and (max-width: 1250px) {
+   
+  
+  .LeftSide{
+left:1.5rem;
+}
+.RightSide{
+ right:1.5rem;
+}
+    .slide {
+      width: 700px !important;
+    }
+    .slide .imgSlide {
+      width: 500px !important;
+    }
+    .slide .image__card {
+      width: 200px !important;
+    }
+  }
+  @media only screen and (max-width: 1080px) {
+    .slide {
+      width: 600px !important;
+      transform: none !important;
+    }
+    .slide .imgSlide {
+      width: 400px !important;
+    }
+    .slide .image__card {
+      width: 200px !important;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .slide {
+      width: 500px !important;
+    }
+    .slide .imgSlide {
+      width: 500px !important;
+    }
+    .image__card {
+      display: none;
+    }
+ 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .app-align-center {
   align-items: center !important;
 }

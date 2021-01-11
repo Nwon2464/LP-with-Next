@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ReactComponents as EmailIcon } from "../../data/icons/emailIcon.svg";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 const BodyMainSection = styled.section`
-  padding: 10rem 0;
+  padding: 100px 0px;
   display: flex !important;
   flex-direction: column;
 
@@ -104,7 +104,7 @@ const BodyMain = () => {
     </a>,
   ];
   return (
-    <BodyMainSection className="main">
+    <BodyMainSection>
       <TransitionGroup component={null}>
         {isMounted &&
           introForMainHeader.map((item, i) => (

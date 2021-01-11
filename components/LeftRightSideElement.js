@@ -6,7 +6,7 @@ const LeftSideBarDiv = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  left: 5rem;
+  left: 3rem;
   right: auto;
   z-index: 98;
   color: var(--color-text-light);
@@ -52,7 +52,7 @@ const RightSideBarDiv = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  right: 5rem;
+  right: 3rem;
   left: auto;
   z-index: 98;
   color: var(--color-text-light);
@@ -98,7 +98,7 @@ const LeftRightSideElement = ({ isHome }) => {
   }, []);
   return (
     <>
-      <LeftSideBarDiv>
+      <LeftSideBarDiv className="LeftSide">
         <TransitionGroup component={null}>
           {isMounted && (
             <CSSTransition classNames="fade" timeout={2000}>
@@ -117,7 +117,7 @@ const LeftRightSideElement = ({ isHome }) => {
         </TransitionGroup>
       </LeftSideBarDiv>
 
-      <RightSideBarDiv>
+      <RightSideBarDiv className="RightSide">
         <TransitionGroup component={null}>
           {isMounted && (
             <CSSTransition classNames="fade" timeout={2000}>

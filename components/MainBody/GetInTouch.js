@@ -12,7 +12,6 @@ const MainSection = styled.section`
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  padding: 15rem 0;
   .touch {
     text-align: center;
     ${"" /* display: flex;

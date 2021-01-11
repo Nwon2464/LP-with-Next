@@ -12,7 +12,6 @@ const MainSection = styled.section`
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
   display: flex;
   justify-content: center;
-  padding-top: 15rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,15 +38,19 @@ const MainSection = styled.section`
     outline: none;
   }
   button:hover {
-    background: var(--color-text-secondary);
+    background: #a8b2d1;
     border-radius: 5px;
   }
   .left-btn {
+    z-index: 99 !important;
+
     left: 0;
     position: absolute;
     top: 135px;
   }
   .right-btn {
+    z-index: 99 !important;
+
     right: 0;
     top: 135px;
     transform: rotate(180deg);
@@ -63,7 +66,7 @@ const MainSection = styled.section`
     width: 2.4rem;
     height: 2.4rem;
     svg {
-      fill: var(--color-text-light);
+      fill: var(--color-text-secondary);
     }
   }
 
@@ -248,8 +251,9 @@ const Projects = () => {
             return (
               <div style={imgStyle} key={i} className="slide">
                 <img
+                  className="imgSlide"
                   src={slide.image}
-                  style={{ height: "inherit", width: 530, objectFit: "fill" }}
+                  style={{ height: "inherit", objectFit: "fill" }}
                   alt="shit"
                 />
                 <div className="image__card">

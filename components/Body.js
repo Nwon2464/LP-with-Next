@@ -1,5 +1,6 @@
 import React from "react";
 import BodyMain from "./MainBody/BodyMain";
+import Footer from "./MainBody/Footer";
 import AboutMe from "./MainBody/AboutMe";
 import Projects from "./MainBody/Projects";
 import OtherSideProjects from "./MainBody/OtherSideProjects";
@@ -11,20 +12,24 @@ const MainDiv = styled.main`
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 0 12rem;
+  padding: 0 10rem;
 }
-  
+
+ section{
+  padding:140px 0px;
+ } 
 `;
 const Body = () => {
   return (
     <>
-      <MainDiv>
+      <MainDiv className="main">
         <BodyMain />
         <AboutMe />
         <Projects />
         <OtherSideProjects />
         <GetInTouch />
       </MainDiv>
+      <Footer />
     </>
   );
 };
