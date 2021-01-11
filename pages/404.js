@@ -8,6 +8,7 @@ const NotFoundDiv = styled.div`
   padding: 15rem;
   .flex {
     display: flex;
+    justify-content: center;
   }
   .content {
     display: flex;
@@ -22,6 +23,7 @@ const NotFoundDiv = styled.div`
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 5px;
+    max-width: 11rem;
     cursor: pointer;
   }
 `;
@@ -40,9 +42,7 @@ export default function NotFound() {
               <p>Sorry. Unless you’ve got a time machine, It is unavailable.</p>
               <Link href="/">
                 <button>
-                  <div>
-                    <div>Go Back to Homepage</div>
-                  </div>
+                  <p>Go Back to Homepage</p>
                 </button>
               </Link>
             </div>
