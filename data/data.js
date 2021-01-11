@@ -17,27 +17,27 @@ module.exports = {
   social: [
     {
       name: "GitHub",
-      url: "https://github.com/bchiang7",
+      url: "https://github.com/dnjsskarb7",
       icon: <GithubIcon />,
     },
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/bchiang7",
+      url: "https://www.linkedin.com/in/dnjsskarb7",
       icon: <LinkIcon />,
     },
     {
       name: "Codepen",
-      url: "https://codepen.io/bchiang7",
+      url: "https://codepen.io/dnjsskarb7",
       icon: <CodePenIcon />,
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/bchiang7",
+      url: "https://www.instagram.com/dnjsskarb7",
       icon: <InstagramIcon />,
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/bchiang7",
+      url: "https://twitter.com/dnjsskarb7",
       icon: <TwitterIcon />,
     },
   ],

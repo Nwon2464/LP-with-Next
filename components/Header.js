@@ -10,14 +10,16 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  height: 10rem;
+  height: 7rem;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 99;
   background: var(--color-background-primary-default);
-  padding: 0 5rem;
-
+  padding: 0 3rem;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
   nav {
     display: flex;
     -webkit-box-pack: justify;
@@ -35,7 +37,7 @@ const StyledHeader = styled.header`
   }
 
   .nav-links ol > li > span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 1rem;
   }
   .nav-links ol > li > span > a {
@@ -105,7 +107,7 @@ const StyledHeader = styled.header`
   .nav-links button :hover {
   }
   .nav-links button a {
-    padding: 1.5rem;
+    padding: 1.3rem;
   }
   .nav-links button a:hover {
   }

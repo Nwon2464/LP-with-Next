@@ -18,6 +18,12 @@ const MainDiv = styled.main`
  section{
   padding:140px 0px;
  } 
+ @media (max-width: 768px){
+  section {
+    padding: 100px 0px;
+  }
+ }
+
 `;
 const Body = () => {
   return (
