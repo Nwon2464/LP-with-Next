@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ReactComponent as IconLoader } from "../data/icons/loader.svg";
 
 import { ReactComponent as JustificationIcon } from "../data/icons/justification.svg";
@@ -6,6 +6,8 @@ import Link from "next/link";
 import { navLinks } from "../data/data";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
+
+import useOnClickOutside from "./useOnClickOutside";
 const StyledHeader = styled.header`
   display: flex;
   -webkit-box-pack: justify;
@@ -31,6 +33,7 @@ const StyledHeader = styled.header`
       border: none;
     }
     .justification {
+      cursor: pointer;
       fill: var(--color-text-light);
       width: 30px;
       height: 30px;
@@ -146,6 +149,13 @@ const StyledHeader = styled.header`
 const StyledNav = styled.nav``;
 const Header = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const wrapperRef = useRef();
+  useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsMounted(true);
@@ -205,36 +215,42 @@ const Header = ({ isHome }) => {
             </CSSTransition>
           </TransitionGroup>
         </div>
-        <div className="HeaderMediaQuery">
-          <div>
-            <button className="justification">
-              <JustificationIcon />
-            </button>
-            <aside>
-              <nav>
-                <ol className="">
-                  <TransitionGroup component={null}>
-                    {navLinks.map(({ url, name }, i) => (
-                      <CSSTransition
-                        in={navLinks && isMounted}
-                        key={i}
-                        appear={true}
-                        classNames="fadedown"
-                        timeout={2000}
-                      >
-                        <li key={i} style={{ transitionDelay: `${i * 100}ms` }}>
-                          <span>
-                            <a href={url}>{name}</a>{" "}
-                          </span>
-                        </li>
-                      </CSSTransition>
-                    ))}
-                  </TransitionGroup>
-                </ol>
+        <div className="HeaderMediaQuery" ref={wrapperRef}>
+          <div onClick={toggleMenu} menuOpen={menuOpen}>
+            {menuOpen ? (
+              <aside>
+                <nav>
+                  <ol className="">
+                    <TransitionGroup component={null}>
+                      {navLinks.map(({ url, name }, i) => (
+                        <CSSTransition
+                          in={navLinks && isMounted}
+                          key={i}
+                          appear={true}
+                          classNames="fadedown"
+                          timeout={2000}
+                        >
+                          <li
+                            key={i}
+                            style={{ transitionDelay: `${i * 100}ms` }}
+                          >
+                            <span>
+                              <a href={url}>{name}</a>{" "}
+                            </span>
+                          </li>
+                        </CSSTransition>
+                      ))}
+                    </TransitionGroup>
+                  </ol>
 
-                <a href=""></a>
-              </nav>
-            </aside>
+                  <a href=""></a>
+                </nav>
+              </aside>
+            ) : (
+              <button className="justification">
+                <JustificationIcon />
+              </button>
+            )}
           </div>
         </div>
       </nav>
