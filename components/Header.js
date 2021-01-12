@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as IconLoader } from "../data/icons/loader.svg";
+
+import { ReactComponent as JustificationIcon } from "../data/icons/justification.svg";
 import Link from "next/link";
 import { navLinks } from "../data/data";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -20,6 +22,20 @@ const StyledHeader = styled.header`
   @media (max-width: 768px) {
     padding: 0 1rem;
   }
+
+  .HeaderMediaQuery {
+    @media (min-width: 768px) {
+      display: none;
+    }
+    button {
+      border: none;
+    }
+    .justification {
+      fill: var(--color-text-light);
+      width: 30px;
+      height: 30px;
+    }
+  }
   nav {
     display: flex;
     -webkit-box-pack: justify;
@@ -34,6 +50,9 @@ const StyledHeader = styled.header`
   .nav-links {
     display: flex;
     margin: 0 0.5rem;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .nav-links ol > li > span {
@@ -185,6 +204,38 @@ const Header = ({ isHome }) => {
               </button>
             </CSSTransition>
           </TransitionGroup>
+        </div>
+        <div className="HeaderMediaQuery">
+          <div>
+            <button className="justification">
+              <JustificationIcon />
+            </button>
+            <aside>
+              <nav>
+                <ol className="">
+                  <TransitionGroup component={null}>
+                    {navLinks.map(({ url, name }, i) => (
+                      <CSSTransition
+                        in={navLinks && isMounted}
+                        key={i}
+                        appear={true}
+                        classNames="fadedown"
+                        timeout={2000}
+                      >
+                        <li key={i} style={{ transitionDelay: `${i * 100}ms` }}>
+                          <span>
+                            <a href={url}>{name}</a>{" "}
+                          </span>
+                        </li>
+                      </CSSTransition>
+                    ))}
+                  </TransitionGroup>
+                </ol>
+
+                <a href=""></a>
+              </nav>
+            </aside>
+          </div>
         </div>
       </nav>
     </StyledHeader>
