@@ -26,6 +26,25 @@ const StyledHeader = styled.header`
   }
 
   .HeaderMediaQuery {
+    .HeaderToggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      padding: 50px 10px;
+      width: min(75vw, 300px);
+      height: 100vh;
+      outline: 0px;
+      background-color: yellow;
+      box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+      z-index: 9;
+      transform: translateX(0vw);
+      visibility: visible;
+      transition: var(--transition);
+    }
     @media (min-width: 768px) {
       display: none;
     }
@@ -216,42 +235,37 @@ const Header = ({ isHome }) => {
           </TransitionGroup>
         </div>
         <div className="HeaderMediaQuery" ref={wrapperRef}>
-          <div onClick={toggleMenu} menuOpen={menuOpen}>
-            {menuOpen ? (
-              <aside>
-                <nav>
-                  <ol className="">
-                    <TransitionGroup component={null}>
-                      {navLinks.map(({ url, name }, i) => (
-                        <CSSTransition
-                          in={navLinks && isMounted}
-                          key={i}
-                          appear={true}
-                          classNames="fadedown"
-                          timeout={2000}
-                        >
-                          <li
-                            key={i}
-                            style={{ transitionDelay: `${i * 100}ms` }}
-                          >
-                            <span>
-                              <a href={url}>{name}</a>{" "}
-                            </span>
-                          </li>
-                        </CSSTransition>
-                      ))}
-                    </TransitionGroup>
-                  </ol>
+          {menuOpen ? (
+            <aside className="HeaderToggle">
+              <nav>
+                <ol className="">
+                  <TransitionGroup component={null}>
+                    {navLinks.map(({ url, name }, i) => (
+                      <CSSTransition
+                        in={navLinks && isMounted}
+                        key={i}
+                        appear={true}
+                        classNames="fadedown"
+                        timeout={2000}
+                      >
+                        <li key={i} style={{ transitionDelay: `${i * 100}ms` }}>
+                          <span>
+                            <a href={url}>{name}</a>{" "}
+                          </span>
+                        </li>
+                      </CSSTransition>
+                    ))}
+                  </TransitionGroup>
+                </ol>
 
-                  <a href=""></a>
-                </nav>
-              </aside>
-            ) : (
-              <button className="justification">
-                <JustificationIcon />
-              </button>
-            )}
-          </div>
+                <a href=""></a>
+              </nav>
+            </aside>
+          ) : (
+            <button className="justification" onClick={toggleMenu}>
+              <JustificationIcon />
+            </button>
+          )}
         </div>
       </nav>
     </StyledHeader>
