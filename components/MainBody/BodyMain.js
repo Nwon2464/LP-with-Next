@@ -14,15 +14,17 @@ const BodyMainSection = styled.section`
     color: var(--color-text-secondary);
     margin: 1.5rem 0;
   }
-
+  .app-firstheading {
+    font-size: clamp(14px, 5vw, 18px);
+  }
+  .app-heading {
+    font-size: clamp(40px, 8vw, 65px);
+  }
   h2 {
-    font-size: 3rem;
     filter: brightness(1.3);
     color: var(--color-text-lightest);
   }
   h3 {
-    font-size: 3rem;
-
     color: var(--color-text-light);
   }
   p {
@@ -89,7 +91,7 @@ const BodyMain = () => {
     return () => clearTimeout(timeout);
   }, []);
   const introForMainHeader = [
-    <h1>Hi, my name is</h1>,
+    <h1 className="app-firstheading">Hi, my name is</h1>,
     <h2 className="app-heading">Namkyu Won. </h2>,
     <h3 className="app-heading">I build things for the web.</h3>,
     <p>

@@ -12,7 +12,7 @@ const MainDiv = styled.main`
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 0 10rem;
+  padding: 0 13.5rem;
 }
 
  section{

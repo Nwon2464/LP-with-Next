@@ -14,20 +14,12 @@ const MainSection = styled.section`
   margin: 0 auto;
   .touch {
     text-align: center;
-    ${"" /* display: flex;
+    ${
+      "" /* display: flex;
     justify-content: center;
-    align-items: center; */};
-    h2 {
-      font-size: 2rem;
-      color: var(--color-text-lightest);
-      filter: brightness(1.3);
-    }
-    h2::before {
-      counter-increment: section 1;
-      content: "0" counter(section) ".";
-      margin-right: 10px;
-      color: var(--color-text-secondary);
-    }
+    align-items: center; */
+    };
+   
     h3 {
       font-size: 1.5rem;
       color: var(--color-text-light);

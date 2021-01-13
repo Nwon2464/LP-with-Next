@@ -17,19 +17,7 @@ const MainSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .head-number {
-  }
-  h2::before {
-    counter-increment: section 1;
-    content: "0" counter(section) ".";
-    margin-right: 10px;
-    color: var(--color-text-secondary);
-  }
-  h2 {
-    font-size: 2rem;
-    filter: brightness(1.3);
-    color: var(--color-text-lightest);
-  }
+
   button,
   button:active,
   button:focus {
@@ -72,7 +60,7 @@ const MainSection = styled.section`
 
   .slides {
     width: 100%;
-    height: 500px;
+    height: 350px;
     position: relative;
     margin-top: 5rem;
     display: flex;

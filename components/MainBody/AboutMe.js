@@ -10,28 +10,6 @@ const MainSection = styled.section`
   transform: translateY(-20px);
   transition: opacity 500ms var(--easing), transform 500ms var(--easing);
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--color-text-lightest);
-    filter: brightness(1.3);
-  }
-  h2::before {
-    counter-increment: section 1;
-    content: "0" counter(section) ".";
-    margin-right: 10px;
-    color: var(--color-text-secondary);
-  }
-  h2::after {
-    content: "";
-    width: 250px;
-    bottom: 15px;
-    margin-left: 30px;
-    height: 1px;
-    position: relative;
-    background-color: #a8b2d1;
-    display: inline-block;
-  }
   p {
     font-size: 1.2rem;
     color: var(--color-text-light);
@@ -67,7 +45,52 @@ const MainSection = styled.section`
     grid-template-columns: 3fr 2fr;
     gap: 50px;
   }
-  .introduce {
+  
+  .head-number {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(25px, 5vw, 30px);
+    color: var(--color-text-lightest);
+    filter: brightness(1.3);
+  }
+ 
+  .head-number::after {
+    content: "";
+    width: 250px;
+    filter: brightness(0.5);
+    margin-left: 25px;
+    height: 1px;
+    position: relative;
+    background-color: var(--color-text-light);
+    display: block;
+  }
+  
+  
+  @media (max-width: 1080px) {
+    .head-number::after {
+      width: 200px;
+    }
+  }
+  @media (max-width: 768px) {
+    .introduce {
+      display: block;
+    }
+    .imageOfMe {
+      margin: 50px auto 0px;
+      width: 70%;
+    }
+    .head-number::after {
+      width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .head-number::after {
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -105,7 +128,7 @@ const AboutMe = () => {
                 })}
             </ul>
           </div>
-          <div>
+          <div className="imageOfMe">
             <div>
               <img src={logo} style={{ width: 300, height: 300 }} alt="photo" />
             </div>

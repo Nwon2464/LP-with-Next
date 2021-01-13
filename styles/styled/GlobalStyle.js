@@ -226,13 +226,22 @@ left:1.5rem;
 
 
 
+.head-number{
+    font-size: clamp(25px,5vw,30px);
+    filter: brightness(1.3);
+    color: var(--color-text-lightest);
+ 
+}
 
+.head-number::before {
+  font-size:clamp(20px,5vw,25px);
 
-
-
-
-
-
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    font-size: clamp(20px, 5vw, 25px);
+    color: var(--color-text-secondary);
+  }
 
 
 
