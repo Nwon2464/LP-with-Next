@@ -334,9 +334,20 @@ const Header = ({ isHome }) => {
               </aside>
             </>
           ) : (
-            <button className="justification" onClick={toggleMenu}>
-              <JustificationIcon />
-            </button>
+            <>
+              <TransitionGroup component={null}>
+                <CSSTransition
+                  in={isMounted}
+                  classNames="fadedown"
+                  appear={true}
+                  timeout={2000}
+                >
+                  <button className="justification" onClick={toggleMenu}>
+                    <JustificationIcon />
+                  </button>
+                </CSSTransition>
+              </TransitionGroup>
+            </>
           )}
         </div>
       </nav>
