@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
   background: var(--color-background-primary-default);
   padding: 0 3rem;
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .HeaderMediaQuery {
@@ -36,15 +36,29 @@ const StyledHeader = styled.header`
       bottom: 0px;
       right: 0px;
       padding: 50px 10px;
-      width: min(75vw, 300px);
-      height: 100vh;
+      width: 45%;
+      ${"" /* width: min(75vw, 300px);
+      height: 100vh; */}
       outline: 0px;
-      background-color: yellow;
-      box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+      background-color: #33358f;
+      box-shadow: -10px 0px 30px -15px #33357c;
       z-index: 9;
-      transform: translateX(0vw);
+      ${"" /* transform: translateX(0vw); */}
       visibility: visible;
-      transition: var(--transition);
+      ${"" /* transition: var(--transition); */}
+
+      .close {
+        top: 140px;
+        right: 30px;
+        cursor: pointer;
+        position: absolute;
+        svg {
+          width: 30px;
+          fill: #31e8ff;
+          height: 30px;
+        }
+      }
+
       nav {
         display: flex;
         justify-content: space-between;
@@ -52,6 +66,18 @@ const StyledHeader = styled.header`
         width: 100%;
         flex-direction: column;
         text-align: center;
+        .resume-link {
+          padding: 20px 50px;
+          border: 1px solid #31e8ff;
+          border-radius: 4px;
+          cursor: pointer;
+          color: #a8b2d1;
+          font-size: 18px;
+          margin: 10% auto 0px;
+        }
+        .resume-link:hover {
+          background: var(--color-text-secondary);
+        }
         ol {
           padding: 0px;
           margin: 0px;
@@ -59,7 +85,7 @@ const StyledHeader = styled.header`
           width: 100%;
           li {
             position: relative;
-            margin: 0px auto 20px;
+            margin: 0px auto 35px;
             counter-increment: item 1;
             font-size: clamp(14px, 4vw, 18px);
             &::before {
@@ -68,9 +94,8 @@ const StyledHeader = styled.header`
               margin-bottom: 5px;
               color: #31e8ff;
             }
-            a {
-              width: 100%;
-              padding: 3px 20px 20px;
+            span:hover {
+              color: #31e8ff;
             }
           }
         }
@@ -85,8 +110,8 @@ const StyledHeader = styled.header`
     .justification {
       cursor: pointer;
       fill: var(--color-text-light);
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
     }
   }
   nav {
@@ -292,13 +317,21 @@ const Header = ({ isHome }) => {
                       ))}
                     </TransitionGroup>
                   </ol>
-
-                  <a href="">Resume</a>
+                  <CSSTransition
+                    in={navLinks && isMounted}
+                    appear={true}
+                    classNames="fadedown"
+                    timeout={2000}
+                  >
+                    <a href="" className="resume-link">
+                      Resume
+                    </a>
+                  </CSSTransition>
                 </nav>
+                <button onClick={toggleMenu} className="close">
+                  <CloseIcon />
+                </button>
               </aside>
-              {/* <button className="close">
-                <CloseIcon />
-              </button> */}
             </>
           ) : (
             <button className="justification" onClick={toggleMenu}>

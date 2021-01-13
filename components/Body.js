@@ -20,7 +20,7 @@ const MainDiv = styled.main`
  } 
  @media (max-width: 768px){
   section {
-    padding: 100px 0px;
+    padding: 105px 0px;
   }
  }
 
