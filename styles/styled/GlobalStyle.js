@@ -155,23 +155,26 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
 @media (max-width: 1080px) {
   .main{
-    padding: 0 6.5rem;
-    }
+    padding: 0 100px !important;
+     }
 }
-    @media (max-width: 768px) {
- .main{
-  padding: 0 50px;
- }
+@media (max-width: 768px) {
+
+  .main {
+      padding: 0 50px !important;
+    }
+
+
  .LeftSide {
   display: none;
  }
  .RightSide{
   display: none;
  }
-    }
-    @media (max-width: 480px) {
+ }
+  @media (max-width: 480px) {
   .main{
-    padding: 0 25px;
+    padding: 0 25px !important;
   }
     }
 
@@ -223,8 +226,13 @@ left:1.5rem;
 
 
 
-
-
+  ${
+    "" /* @media (max-width: 768px){
+.main {
+    padding: 0px 50px !important;
+}
+  } */
+  }
 
 .head-number{
     font-size: clamp(25px,5vw,30px);

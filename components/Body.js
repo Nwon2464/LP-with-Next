@@ -12,18 +12,17 @@ const MainDiv = styled.main`
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 0 13.5rem;
-}
+  padding: 0 225px;
 
- section{
-  padding:140px 0px;
- } 
- @media (max-width: 768px){
   section {
-    padding: 105px 0px;
+    padding: 140px 0px;
   }
- }
 
+  @media (max-width: 768px) {
+    section {
+      padding: 105px 0px;
+    }
+  }
 `;
 const Body = () => {
   return (
