@@ -1,7 +1,7 @@
 import React from "react";
 import { skills } from "../../data/data";
 import styled from "styled-components";
-import logo from "./logo.png";
+import photoOfMe from "../../public/NamkyuWon.jpg";
 import useIntersect from "../useIntersect";
 const MainSection = styled.section`
   max-width: 100%;
@@ -45,7 +45,7 @@ const MainSection = styled.section`
     grid-template-columns: 3fr 2fr;
     gap: 50px;
   }
-  
+
   .head-number {
     display: flex;
     -webkit-box-align: center;
@@ -57,7 +57,7 @@ const MainSection = styled.section`
     color: var(--color-text-lightest);
     filter: brightness(1.3);
   }
- 
+
   .head-number::after {
     content: "";
     width: 250px;
@@ -68,8 +68,18 @@ const MainSection = styled.section`
     background-color: var(--color-text-light);
     display: block;
   }
-  
-  
+  .imageOfMe {
+    max-width: 300px;
+    img {
+      width: 100%;
+      border-radius: 4px;
+      filter: grayscale(20%) contrast(1);
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
   @media (max-width: 1080px) {
     .head-number::after {
       width: 200px;
@@ -130,7 +140,7 @@ const AboutMe = () => {
           </div>
           <div className="imageOfMe">
             <div>
-              <img src={logo} style={{ width: 300, height: 300 }} alt="photo" />
+              <img src={photoOfMe} alt="photo" />
             </div>
           </div>
         </div>
