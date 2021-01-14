@@ -15,7 +15,7 @@ const MainSection = styled.section`
   flex-direction: column;
   align-items: center;
   h2 {
-    font-size: 2rem;
+    font-size: clamp(25px, 5vw, 30px);
     margin-bottom: 2rem;
 
     filter: brightness(1.3);
