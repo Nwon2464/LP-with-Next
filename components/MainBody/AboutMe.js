@@ -29,13 +29,13 @@ const MainSection = styled.section`
     padding-bottom: 2rem;
     margin-left: 2rem;
     color: var(--color-text-light);
-    font-size: 1.4rem;
+    font-size: 14px;
   }
   ul.skills li::before {
     content: "▹";
     position: absolute;
     left: -35px;
-    top: 10px;
+    top: 1px;
     font-size: 2rem;
     color: var(--color-text-secondary);
     line-height: 12px;

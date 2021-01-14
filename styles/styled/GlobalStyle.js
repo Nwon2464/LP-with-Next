@@ -223,7 +223,35 @@ left:1.5rem;
  
   }
 
+  @media (max-width:600px) {
+  .slide{
+    width:400px !important;
 
+  }
+  .slide .imgSlide{
+    width:400px !important;
+  }
+  }
+
+  @media (max-width:500px) {
+  .slide{
+    width:375px !important;
+
+  }
+  .slide .imgSlide{
+    width:375px !important;
+  }
+  }
+
+  @media (max-width: 400px) {
+  .slide{
+    width:350px !important;
+
+  }
+  .slide .imgSlide{
+    width:350px !important;
+  }
+  }
 
 
   ${

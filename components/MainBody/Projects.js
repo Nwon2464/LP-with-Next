@@ -32,14 +32,14 @@ const MainSection = styled.section`
   .left-btn {
     z-index: 99 !important;
 
-    left: 0;
+    left: 0px;
     position: absolute;
     top: 135px;
   }
   .right-btn {
     z-index: 99 !important;
 
-    right: 0;
+    right: 0px;
     top: 135px;
     transform: rotate(180deg);
     position: absolute;
