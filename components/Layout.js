@@ -20,15 +20,12 @@ export async function getStaticProps(context) {
     props: { hello: "!" },
   };
 }
-const MainDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
+
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 export default function Layout({ children, location }) {
@@ -39,22 +36,21 @@ export default function Layout({ children, location }) {
     <>
       <Head>
         <title>Next App</title>
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <MainDiv>
-            {isLoading && isHome ? (
-              <Loader finishLoading={() => setIsLoading(false)} />
-            ) : (
-              <StyledContent>
-                <Header isHome={isHome} />
-                <LeftRightSideElement isHome={isHome} />
+          {isLoading && isHome ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
+          ) : (
+            <StyledContent>
+              <Header isHome={isHome} />
+              <LeftRightSideElement isHome={isHome} />
 
-                <div id="content">{children}</div>
-              </StyledContent>
-            )}
-          </MainDiv>
+              <div id="content">{children}</div>
+            </StyledContent>
+          )}
         </ThemeProvider>
       </div>
     </>
