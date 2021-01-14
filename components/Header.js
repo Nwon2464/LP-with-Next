@@ -24,6 +24,14 @@ const StyledHeader = styled.header`
   padding: 0 3rem;
   @media (max-width: 768px) {
     padding: 0 2rem;
+    .HeaderMediaQuery {
+      display: block;
+    }
+  }
+  @media (min-width: 769px) {
+    .HeaderMediaQuery {
+      display: none;
+    }
   }
 
   .HeaderMediaQuery {
@@ -48,14 +56,14 @@ const StyledHeader = styled.header`
       ${"" /* transition: var(--transition); */}
 
       .close {
-        top: 140px;
+        top: 40px;
         right: 30px;
         cursor: pointer;
         position: absolute;
         svg {
-          width: 30px;
+          width: 40px;
           fill: #31e8ff;
-          height: 30px;
+          height: 40px;
         }
       }
 
@@ -67,7 +75,7 @@ const StyledHeader = styled.header`
         flex-direction: column;
         text-align: center;
         .resume-link {
-          padding: 20px 50px;
+          padding: 20px;
           border: 1px solid #31e8ff;
           border-radius: 4px;
           cursor: pointer;
@@ -100,9 +108,6 @@ const StyledHeader = styled.header`
           }
         }
       }
-    }
-    @media (min-width: 768px) {
-      display: none;
     }
     button {
       border: none;

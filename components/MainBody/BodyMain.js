@@ -6,7 +6,8 @@ const BodyMainSection = styled.section`
   padding: 100px 0px;
   display: flex !important;
   flex-direction: column;
-
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 
   h1 {
@@ -15,7 +16,7 @@ const BodyMainSection = styled.section`
     margin: 1.5rem 0;
   }
   .app-firstheading {
-    font-size: clamp(14px, 5vw, 18px);
+    font-size: clamp(16px, 5vw, 26px);
   }
   .app-heading {
     font-size: clamp(40px, 8vw, 65px);
@@ -37,8 +38,8 @@ const BodyMainSection = styled.section`
     border: 1px solid var(--color-text-secondary);
     border-radius: var(--border-radius-5);
     font-size: 1.3rem;
-    padding: 1.5rem 3rem;
-    margin-top: 5rem;
+    padding: 1.5rem 2rem;
+    margin-top: 4rem;
     cursor: pointer;
   }
   button {
