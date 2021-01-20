@@ -222,28 +222,28 @@ const projects = [
     tech: ["React", "slick-carousel", "styled-components"],
   },
   {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+    deployment: "https://frontend-react-video-app.vercel.app",
 
-    title: "Amazon Landing Page Clone",
+    title: "Twitch Application Clone",
     description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
+      "Building Twitch App mainly with React, Redux-form, Redux and etc",
+    tech: ["React", "Redux-form", "Redux"],
   },
   {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+    deployment: "https://serene-sands-56255.herokuapp.com",
 
-    title: "Amazon Landing Page Clone",
+    title: "OAuth App",
     description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
+      "Built with OAuth login authentication providers: Facebook, Instagram, Google, Twitch, and Amazon",
+    tech: ["React", "MongoDB", "Redux-Form","Webpack"],
   },
   {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+    deployment: "https://corona-app-eight.vercel.app",
 
-    title: "Amazon Landing Page Clone",
+    title: "Corona Virus Tracker App",
     description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
+      "COVID-19 Tracker Application fetching live data from the API and creating cards displaying the statistics as well as charts",
+    tech: ["React", "Chart.js", "Material UI"],
   },
   {
     deployment: "https://amazon.dnjsskarb7.vercel.app/",
