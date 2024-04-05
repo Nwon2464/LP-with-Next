@@ -162,7 +162,7 @@ const OtherSideProjects = () => {
   return (
     <MainSection ref={setRef} visible={visible}>
       <h2>Other Side Projects</h2>
-      <Link href="/archive">
+      <Link legacyBehavior href="/archive">
         <a className="archive">View the archieve</a>
       </Link>
       <div className="grid">
@@ -176,7 +176,7 @@ const OtherSideProjects = () => {
                       <FolderIcon />
                     </div>
                     <div className="links">
-                      <Link href={e.deployment}>
+                      <Link legacyBehavior href={e.deployment}>
                         <a>
                           <External />
                         </a>
