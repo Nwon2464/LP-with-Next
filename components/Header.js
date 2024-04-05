@@ -255,7 +255,7 @@ const Header = ({ isHome }) => {
           mountOnEnter={true}
         >
           <div className="logo">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <IconLoader viewBox="0 -30 580 512" />
             </Link>
           </div>
