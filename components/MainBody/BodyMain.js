@@ -96,9 +96,8 @@ const BodyMain = () => {
     <h2 className="app-heading">Namkyu Won. </h2>,
     <h3 className="app-heading">I build things for the web.</h3>,
     <p>
-      I'm a software engineer based in Tokyo, JP specializing in building (and
-      occasionally designing) exceptional websites, applications, and everything
-      in between.{" "}
+      I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. 
+      My goal is to always build products that provide pixel-perfect, performant experiences.{" "}
     </p>,
     <a href="mailto:nwon2464@gmail.com">
       <button>

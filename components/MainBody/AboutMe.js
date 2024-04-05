@@ -115,20 +115,13 @@ const AboutMe = () => {
         <div className="introduce">
           <div>
             <div>
-              <p>Hello! I'm Won, a software engineer based in Tokyo, JP.</p>
+              <p>Hello! I'm Won.</p>
               <p>
-                I enjoy creating things that live on the internet, whether that
-                be websites, applications, or anything in between. My goal is to
-                always build products that provide pixel-perfect, performant
-                experiences.
+                Business Administration graduate with a passion for technology. 
+                I am currently delving into algorithms and data structures to further enhance efficiency.
               </p>
               <p>
-                Shortly after graduating from University of Washington, I joined
-                the engineering team at Upstatement where I work on a wide
-                variety of interesting and meaningful projects on a daily basis.
-              </p>
-              <p>
-                Here are a few technologies I've been working with recently:
+                My recent tech stack includes:
               </p>{" "}
             </div>
             <ul className="skills">

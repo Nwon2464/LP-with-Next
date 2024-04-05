@@ -245,54 +245,54 @@ const projects = [
       "COVID-19 Tracker Application fetching live data from the API and creating cards displaying the statistics as well as charts",
     tech: ["React", "Chart.js", "Material UI"],
   },
-  {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  // {
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  //   title: "Amazon Landing Page Clone",
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
+  // {
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  //   title: "Amazon Landing Page Clone",
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
+  // {
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    title: "Amazon Landing Page Clone",
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  //   title: "Amazon Landing Page Clone",
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
+  // {
+  //   title: "Amazon Landing Page Clone",
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
+  // {
+  //   title: "Amazon Landing Page Clone",
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
-  {
-    title: "Amazon Landing Page Clone",
-    deployment: "https://amazon.dnjsskarb7.vercel.app/",
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
+  // {
+  //   title: "Amazon Landing Page Clone",
+  //   deployment: "https://amazon.dnjsskarb7.vercel.app/",
 
-    description:
-      "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
-    tech: ["React", "slick-carousel", "styled-components"],
-  },
+  //   description:
+  //     "Building Amazon clone landing page with React, Styled-components, and slick-carousel",
+  //   tech: ["React", "slick-carousel", "styled-components"],
+  // },
 ];
 const data = [
   {

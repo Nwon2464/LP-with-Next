@@ -56,26 +56,36 @@ const currentData = [
       "Redux-Form",
       "Twitch API",
     ],
-    link: [{ github: "https://www.google.com/", link: "" }],
+    link: [{ github: "https://github.com/Nwon2464/portfolio6-twitch-clone-client", link: "" }],
+  },
+  {
+    year: "2020",
+    title: "Amazon Landing Page Clone",
+    built: [
+      "React",
+      "Slick-carousel",
+      "Styled-components",
+    ],
+    link: [{ github: "https://github.com/Nwon2464/amazon", link: "" }],
   },
   {
     year: "2020",
     title: "Covid-19 Tracker",
     built: ["React", "ChartJS", "Covid-19 API"],
-    link: [{ github: "https://www.google.com/", link: "" }],
+    link: [{ github: "https://github.com/Nwon2464/Corona-App", link: "" }],
   },
   {
     year: "2020",
     title: "Email Inbox",
     built: ["React", "React-table", "Express", "Faker", "React-DatePicker"],
-    link: [{ github: "https://www.google.com/", link: "" }],
+    link: [{ github: "https://github.com/Nwon2464/emailInbox", link: "" }],
   },
   {
     year: "2020",
     title: "OAuth Strategies",
     built: ["React", "Express", "PassportJS"],
     link: [
-      { github: "https://www.google.com/", link: "https://www.naver.com" },
+      { github: "https://github.com/Nwon2464/portfolio2-auth-strategies", link: "" },
     ],
   },
 ];

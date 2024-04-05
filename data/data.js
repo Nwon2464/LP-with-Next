@@ -13,16 +13,17 @@ module.exports = {
     { skillSet: "Vue" },
     { skillSet: "Node Express" },
     { skillSet: "MongoDB" },
+    { skillSet: "Google App Script" },
   ],
   social: [
     {
       name: "GitHub",
-      url: "https://github.com/dnjsskarb7",
+      url: "https://github.com/nwon2464",
       icon: <GithubIcon />,
     },
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/dnjsskarb7",
+      url: "https://www.linkedin.com/in/namkyu-won-9b242910a/",
       icon: <LinkIcon />,
     },
     {
